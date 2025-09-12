@@ -1,0 +1,32 @@
+destination,asn,as_name,start_hop_idx,end_hop_idx,num_hops,countries,start_avg_ms,end_avg_ms,added_ms
+tdbank.com,AS-NYU,NYU Campus Network,1,9,9,United States,99.66,10.5,26.181000000000008
+tdbank.com,AS3356,"Level 3 Parent, LLC",10,12,3,United States,24.929,91.685,97.25200000000001
+tdbank.com,AS20940,Akamai,13,20,8,United States,77.843,82.573,82.573
+google.com,AS-NYU,NYU Campus Network,1,9,9,United States,34.267,29.256,45.937000000000005
+google.com,N/A,N/A,10,12,3,United States,36.326,21.58,20.726
+google.com,AS15169,Google LLC,13,15,3,United States,7.49,7.646,5.002000000000001
+reddit.com,AS-NYU,NYU Campus Network,1,9,9,United States,6.83,6.547,68.807
+reddit.com,AS3356,"Level 3 Parent, LLC",10,11,2,United States,64.751,8.198,58.20400000000001
+reddit.com,AS54113,"Fastly, Inc.",12,12,1,United States,16.136,16.136,7.937999999999999
+news.ycombinator.com,AS-NYU,NYU Campus Network,1,9,9,United States,8.553,51.052,109.418
+news.ycombinator.com,AS3356,"Level 3 Parent, LLC",10,12,3,United States,35.712,118.46,82.74799999999999
+news.ycombinator.com,AS21581,M5 Computer Security,13,13,1,United States,104.91,104.91,0.0
+github.com,AS-NYU,NYU Campus Network,1,9,9,United States,7.121,6.065,42.660999999999994
+github.com,AS3356,"Level 3 Parent, LLC",10,10,1,United States,16.096,16.096,10.030999999999999
+github.com,AS6461,Zayo (heuristic),11,18,8,N/A,27.837,0.0,107.485
+github.com,AS36459,"GitHub, Inc.",19,19,1,United States,13.823,13.823,13.823
+stackoverflow.com,AS-NYU,NYU Campus Network,1,9,9,United States,9.203,7.644,21.986
+stackoverflow.com,AS3356,"Level 3 Parent, LLC",10,11,2,United States,19.888,31.315,23.671
+stackoverflow.com,AS13335,"Cloudflare, Inc.",12,13,2,United States,26.058,9.154,0.0
+emol.com,AS-NYU,NYU Campus Network,1,9,9,United States,39.685,71.493,93.775
+emol.com,AS3356,"Level 3 Parent, LLC",10,10,1,United States,34.402,34.402,0.0
+emol.com,AS26599,Cirion (heuristic),11,11,1,N/A,139.29,139.29,104.88799999999999
+emol.com,AS3356,"Level 3 Parent, LLC",12,12,1,Chile,174.15,174.15,34.860000000000014
+emol.com,AS6429,Telmex Chile Internet S.A.,13,17,5,Chile,139.16,250.12,275.27
+metoffice.gov.uk,AS-NYU,NYU Campus Network,1,9,9,United States,20.997,10.079,23.245999999999995
+metoffice.gov.uk,AS3356,"Level 3 Parent, LLC",10,11,2,United States,17.508,26.112,16.032999999999998
+metoffice.gov.uk,AS6453,TATA COMMUNICATIONS (AMERICA) INC,12,20,9,France;Germany;United Kingdom;United States,129.32,118.76,128.142
+metoffice.gov.uk,AS16625,"Akamai Technologies, Inc.",21,21,1,Sweden,155.05,155.05,36.290000000000006
+reuters.com,AS-NYU,NYU Campus Network,1,9,9,United States,9.016,8.148,10.497
+reuters.com,AS3356,"Level 3 Parent, LLC",10,17,8,United States,8.861,0.0,31.395999999999997
+reuters.com,AS4583,West Publishing Corporation,18,18,1,United States,38.162,38.162,38.162

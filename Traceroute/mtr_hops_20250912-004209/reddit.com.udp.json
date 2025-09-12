@@ -1,0 +1,58 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "reddit.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.372,
+                "Avg": 5.299,
+                "Best": 3.682,
+                "Wrst": 9.918,
+                "StDev": 1.937
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 3.84,
+                "Avg": 13.439,
+                "Best": 3.719,
+                "Wrst": 63.011,
+                "StDev": 20.168
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 12.933,
+                "Avg": 9.645,
+                "Best": 6.471,
+                "Wrst": 13.726,
+                "StDev": 2.807
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            }
+        ]
+    }
+}

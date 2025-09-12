@@ -1,0 +1,9 @@
+provider,hops_with_positive_delta,sum_added_avg_ms,avg_added_per_hop_ms
+campus,32,416.521,13.016
+lumen_level3,10,224.569,22.457
+unknown,13,495.641,38.126
+akamai,2,118.863,59.431
+nysernet,1,7.07,7.07
+zayo,2,107.485,53.742
+other_external,5,141.965,28.393
+cirion,1,104.888,104.888

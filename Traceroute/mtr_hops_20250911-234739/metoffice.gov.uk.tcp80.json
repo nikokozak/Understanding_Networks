@@ -1,0 +1,113 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "metoffice.gov.uk",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 4.749,
+                "Avg": 5.469,
+                "Best": 4.273,
+                "Wrst": 8.042,
+                "StDev": 1.276
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 8.287,
+                "Avg": 7.717,
+                "Best": 6.124,
+                "Wrst": 10.219,
+                "StDev": 1.67
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 10.993,
+                "Avg": 10.972,
+                "Best": 8.096,
+                "Wrst": 13.252,
+                "StDev": 1.677
+            },
+            {
+                "count": 4,
+                "host": "0.ae2.gw16.nyc1.alter.net",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 8.643,
+                "Avg": 10.117,
+                "Best": 8.643,
+                "Wrst": 12.78,
+                "StDev": 1.449
+            },
+            {
+                "count": 5,
+                "host": "alter.net.customer.alter.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 10.041,
+                "Avg": 11.074,
+                "Best": 10.032,
+                "Wrst": 12.023,
+                "StDev": 0.91
+            },
+            {
+                "count": 6,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 7,
+                "host": "192.168.230.45",
+                "Loss%": 50.0,
+                "Snt": 8,
+                "Last": 8.861,
+                "Avg": 9.857,
+                "Best": 8.861,
+                "Wrst": 10.859,
+                "StDev": 0.822
+            },
+            {
+                "count": 8,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 9,
+                "host": "a104-92-224-40.deploy.static.akamaitechnologies.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 13.392,
+                "Avg": 11.009,
+                "Best": 7.931,
+                "Wrst": 14.875,
+                "StDev": 2.492
+            }
+        ]
+    }
+}

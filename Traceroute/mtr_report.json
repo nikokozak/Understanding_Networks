@@ -1,0 +1,1754 @@
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "tdbank.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 113.51,
+                "Avg": 99.66,
+                "Best": 3.83,
+                "Wrst": 368.93,
+                "StDev": 143.77
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 61.572,
+                "Avg": 77.121,
+                "Best": 4.468,
+                "Wrst": 315.77,
+                "StDev": 122.06
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.276,
+                "Avg": 95.149,
+                "Best": 5.806,
+                "Wrst": 260.08,
+                "StDev": 103.59
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 12.964,
+                "Avg": 80.783,
+                "Best": 5.776,
+                "Wrst": 209.37,
+                "StDev": 73.598
+            },
+            {
+                "count": 5,
+                "host": "nyugwb-vl3091.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.537,
+                "Avg": 44.759,
+                "Best": 4.52,
+                "Wrst": 154.5,
+                "StDev": 58.221
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.518,
+                "Avg": 27.428,
+                "Best": 4.518,
+                "Wrst": 100.63,
+                "StDev": 34.901
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.256,
+                "Avg": 35.581,
+                "Best": 5.058,
+                "Wrst": 90.274,
+                "StDev": 34.588
+            },
+            {
+                "count": 8,
+                "host": "dmzgwd-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.569,
+                "Avg": 34.322,
+                "Best": 4.959,
+                "Wrst": 141.63,
+                "StDev": 42.298
+            },
+            {
+                "count": 9,
+                "host": "10.254.255.109",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.007,
+                "Avg": 10.5,
+                "Best": 5.211,
+                "Wrst": 36.29,
+                "StDev": 9.467
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 159.06,
+                "Avg": 24.929,
+                "Best": 6.451,
+                "Wrst": 159.06,
+                "StDev": 47.201
+            },
+            {
+                "count": 11,
+                "host": "ae1.3501.ear1.newyork6.net.lumen.tech",
+                "Loss%": 90.0,
+                "Snt": 10,
+                "Last": 8.862,
+                "Avg": 8.862,
+                "Best": 8.862,
+                "Wrst": 8.862,
+                "StDev": 0.0
+            },
+            {
+                "count": 12,
+                "host": "4.30.178.54",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 53.669,
+                "Avg": 91.685,
+                "Best": 4.924,
+                "Wrst": 303.61,
+                "StDev": 111.79
+            },
+            {
+                "count": 13,
+                "host": "ae2.r01.lga01.icn.netarch.akamai.com",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 5.498,
+                "Avg": 77.843,
+                "Best": 5.498,
+                "Wrst": 250.8,
+                "StDev": 80.327
+            },
+            {
+                "count": 14,
+                "host": "ae3.r01.ewr01.icn.netarch.akamai.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.808,
+                "Avg": 61.644,
+                "Best": 6.618,
+                "Wrst": 199.22,
+                "StDev": 59.473
+            },
+            {
+                "count": 15,
+                "host": "ae1.r01.ewr01.ien.netarch.akamai.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.681,
+                "Avg": 29.108,
+                "Best": 6.681,
+                "Wrst": 146.78,
+                "StDev": 44.726
+            },
+            {
+                "count": 16,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 17,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 18,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 19,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 20,
+                "host": "a23-206-172-30.deploy.static.akamaitechnologies.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.539,
+                "Avg": 82.573,
+                "Best": 6.539,
+                "Wrst": 403.51,
+                "StDev": 131.07
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "google.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 16.291,
+                "Avg": 34.267,
+                "Best": 4.599,
+                "Wrst": 94.798,
+                "StDev": 41.206
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.756,
+                "Avg": 40.561,
+                "Best": 5.69,
+                "Wrst": 69.672,
+                "StDev": 24.868
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 44.387,
+                "Avg": 13.187,
+                "Best": 4.024,
+                "Wrst": 46.919,
+                "StDev": 17.137
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 9.703,
+                "Avg": 25.375,
+                "Best": 4.481,
+                "Wrst": 76.503,
+                "StDev": 29.399
+            },
+            {
+                "count": 5,
+                "host": "nyugwb-vl3091.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 11.249,
+                "Avg": 13.124,
+                "Best": 5.524,
+                "Wrst": 59.374,
+                "StDev": 16.476
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.709,
+                "Avg": 8.588,
+                "Best": 5.029,
+                "Wrst": 23.985,
+                "StDev": 5.674
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.818,
+                "Avg": 12.797,
+                "Best": 5.424,
+                "Wrst": 63.551,
+                "StDev": 17.926
+            },
+            {
+                "count": 8,
+                "host": "dmzgwc-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.884,
+                "Avg": 6.01,
+                "Best": 4.675,
+                "Wrst": 8.88,
+                "StDev": 1.278
+            },
+            {
+                "count": 9,
+                "host": "extgwa-dmzgwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.251,
+                "Avg": 29.256,
+                "Best": 5.036,
+                "Wrst": 93.64,
+                "StDev": 32.399
+            },
+            {
+                "count": 10,
+                "host": "nyc-9208-nyu-cdn.nysernet.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 76.924,
+                "Avg": 36.326,
+                "Best": 5.407,
+                "Wrst": 77.312,
+                "StDev": 26.241
+            },
+            {
+                "count": 11,
+                "host": "nyc32-55a1-nyc32-9208-cdn.nysernet.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 10.123,
+                "Avg": 7.924,
+                "Best": 5.597,
+                "Wrst": 10.872,
+                "StDev": 1.713
+            },
+            {
+                "count": 12,
+                "host": "199.109.114.18",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.406,
+                "Avg": 21.58,
+                "Best": 6.703,
+                "Wrst": 67.027,
+                "StDev": 22.181
+            },
+            {
+                "count": 13,
+                "host": "142.251.66.217",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.107,
+                "Avg": 7.49,
+                "Best": 6.25,
+                "Wrst": 9.321,
+                "StDev": 0.948
+            },
+            {
+                "count": 14,
+                "host": "216.239.40.167",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.832,
+                "Avg": 12.492,
+                "Best": 6.027,
+                "Wrst": 55.278,
+                "StDev": 15.202
+            },
+            {
+                "count": 15,
+                "host": "lga34s38-in-f14.1e100.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.48,
+                "Avg": 7.646,
+                "Best": 5.536,
+                "Wrst": 13.753,
+                "StDev": 2.627
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "reddit.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.724,
+                "Avg": 6.83,
+                "Best": 4.245,
+                "Wrst": 16.403,
+                "StDev": 4.129
+            },
+            {
+                "count": 2,
+                "host": "coregwd-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.084,
+                "Avg": 13.549,
+                "Best": 3.773,
+                "Wrst": 80.879,
+                "StDev": 23.838
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo2-18-coregwd.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.706,
+                "Avg": 5.543,
+                "Best": 3.952,
+                "Wrst": 8.706,
+                "StDev": 1.628
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 86.172,
+                "Avg": 57.588,
+                "Best": 5.738,
+                "Wrst": 86.172,
+                "StDev": 20.462
+            },
+            {
+                "count": 5,
+                "host": "nyugwb-vl3091.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.896,
+                "Avg": 6.581,
+                "Best": 4.865,
+                "Wrst": 12.695,
+                "StDev": 2.276
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.584,
+                "Avg": 6.326,
+                "Best": 4.567,
+                "Wrst": 8.847,
+                "StDev": 1.125
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 18.269,
+                "Avg": 15.962,
+                "Best": 5.086,
+                "Wrst": 86.526,
+                "StDev": 25.16
+            },
+            {
+                "count": 8,
+                "host": "dmzgwd-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.747,
+                "Avg": 6.14,
+                "Best": 5.271,
+                "Wrst": 7.987,
+                "StDev": 0.783
+            },
+            {
+                "count": 9,
+                "host": "10.254.255.109",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.791,
+                "Avg": 6.547,
+                "Best": 4.542,
+                "Wrst": 8.791,
+                "StDev": 1.567
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 101.74,
+                "Avg": 64.751,
+                "Best": 8.703,
+                "Wrst": 101.74,
+                "StDev": 24.413
+            },
+            {
+                "count": 11,
+                "host": "4.8.6.114",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.448,
+                "Avg": 8.198,
+                "Best": 6.453,
+                "Wrst": 12.488,
+                "StDev": 1.734
+            },
+            {
+                "count": 12,
+                "host": "151.101.193.140",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.88,
+                "Avg": 16.136,
+                "Best": 5.576,
+                "Wrst": 103.7,
+                "StDev": 30.77
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "news.ycombinator.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 34.446,
+                "Avg": 8.553,
+                "Best": 3.973,
+                "Wrst": 34.446,
+                "StDev": 9.186
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.278,
+                "Avg": 53.458,
+                "Best": 4.278,
+                "Wrst": 89.552,
+                "StDev": 36.292
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.723,
+                "Avg": 41.44,
+                "Best": 3.985,
+                "Wrst": 362.14,
+                "StDev": 112.69
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.289,
+                "Avg": 32.274,
+                "Best": 4.348,
+                "Wrst": 261.4,
+                "StDev": 80.596
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.362,
+                "Avg": 21.663,
+                "Best": 5.13,
+                "Wrst": 156.7,
+                "StDev": 47.468
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.555,
+                "Avg": 59.328,
+                "Best": 4.555,
+                "Wrst": 95.426,
+                "StDev": 38.818
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 73.468,
+                "Avg": 24.204,
+                "Best": 5.19,
+                "Wrst": 73.468,
+                "StDev": 25.142
+            },
+            {
+                "count": 8,
+                "host": "dmzgwc-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 4.359,
+                "Avg": 45.736,
+                "Best": 4.359,
+                "Wrst": 368.52,
+                "StDev": 121.05
+            },
+            {
+                "count": 9,
+                "host": "extgwc-eth11-1-dmzgwc-eth7-1.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.37,
+                "Avg": 51.052,
+                "Best": 5.37,
+                "Wrst": 266.37,
+                "StDev": 78.326
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 43.123,
+                "Avg": 35.712,
+                "Best": 4.885,
+                "Wrst": 164.69,
+                "StDev": 50.958
+            },
+            {
+                "count": 11,
+                "host": "ae0.11.bar1.sandiego1.net.lumen.tech",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 66.017,
+                "Avg": 75.479,
+                "Best": 66.017,
+                "Wrst": 112.97,
+                "StDev": 14.931
+            },
+            {
+                "count": 12,
+                "host": "giglinx-inc.bar1.sandiego1.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 70.999,
+                "Avg": 118.46,
+                "Best": 69.037,
+                "Wrst": 156.55,
+                "StDev": 30.186
+            },
+            {
+                "count": 13,
+                "host": "news.ycombinator.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 66.842,
+                "Avg": 104.91,
+                "Best": 66.842,
+                "Wrst": 138.11,
+                "StDev": 22.455
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "github.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.893,
+                "Avg": 7.121,
+                "Best": 3.946,
+                "Wrst": 21.561,
+                "StDev": 5.199
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 85.586,
+                "Avg": 28.816,
+                "Best": 5.254,
+                "Wrst": 92.779,
+                "StDev": 36.022
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 28.115,
+                "Avg": 42.156,
+                "Best": 4.738,
+                "Wrst": 82.079,
+                "StDev": 29.482
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 10.123,
+                "Avg": 20.385,
+                "Best": 5.154,
+                "Wrst": 75.416,
+                "StDev": 22.59
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.0,
+                "Avg": 8.167,
+                "Best": 4.942,
+                "Wrst": 17.763,
+                "StDev": 4.041
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 6.901,
+                "Avg": 8.299,
+                "Best": 4.604,
+                "Wrst": 22.883,
+                "StDev": 5.615
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 31.714,
+                "Avg": 15.726,
+                "Best": 5.346,
+                "Wrst": 73.338,
+                "StDev": 21.759
+            },
+            {
+                "count": 8,
+                "host": "dmzgwd-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.732,
+                "Avg": 5.998,
+                "Best": 4.811,
+                "Wrst": 7.836,
+                "StDev": 0.948
+            },
+            {
+                "count": 9,
+                "host": "10.254.255.109",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.363,
+                "Avg": 6.065,
+                "Best": 4.374,
+                "Wrst": 8.896,
+                "StDev": 1.242
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 18.4,
+                "Avg": 16.096,
+                "Best": 6.856,
+                "Wrst": 32.81,
+                "StDev": 8.122
+            },
+            {
+                "count": 11,
+                "host": "zayo.ae71.ter1.lga5.us.zip.zayo.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 99.292,
+                "Avg": 27.837,
+                "Best": 5.627,
+                "Wrst": 110.72,
+                "StDev": 41.022
+            },
+            {
+                "count": 12,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 13,
+                "host": "ae24.cs4.iad93.us.eth.zayo.com",
+                "Loss%": 90.0,
+                "Snt": 10,
+                "Last": 95.744,
+                "Avg": 95.744,
+                "Best": 95.744,
+                "Wrst": 95.744,
+                "StDev": 0.0
+            },
+            {
+                "count": 14,
+                "host": "ae11.mpr3.iad2.us.zip.zayo.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 18.576,
+                "Avg": 22.5,
+                "Best": 13.31,
+                "Wrst": 37.415,
+                "StDev": 9.981
+            },
+            {
+                "count": 15,
+                "host": "208.185.107.89.idia-377562-901-zyo.zip.zayo.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 13.523,
+                "Avg": 13.108,
+                "Best": 10.62,
+                "Wrst": 23.479,
+                "StDev": 3.798
+            },
+            {
+                "count": 16,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 17,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 18,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 19,
+                "host": "lb-140-82-112-3-iad.github.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 12.754,
+                "Avg": 13.823,
+                "Best": 11.853,
+                "Wrst": 16.535,
+                "StDev": 1.581
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "stackoverflow.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.319,
+                "Avg": 9.203,
+                "Best": 4.216,
+                "Wrst": 25.617,
+                "StDev": 6.438
+            },
+            {
+                "count": 2,
+                "host": "coregwd-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.946,
+                "Avg": 10.357,
+                "Best": 3.813,
+                "Wrst": 56.811,
+                "StDev": 16.359
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo2-18-coregwd.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.61,
+                "Avg": 19.303,
+                "Best": 4.22,
+                "Wrst": 69.568,
+                "StDev": 25.105
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.639,
+                "Avg": 5.987,
+                "Best": 4.639,
+                "Wrst": 8.08,
+                "StDev": 1.146
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 20.0,
+                "Snt": 10,
+                "Last": 6.843,
+                "Avg": 10.537,
+                "Best": 4.563,
+                "Wrst": 38.578,
+                "StDev": 11.412
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.371,
+                "Avg": 6.232,
+                "Best": 3.892,
+                "Wrst": 8.475,
+                "StDev": 1.248
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 5.741,
+                "Avg": 13.251,
+                "Best": 4.855,
+                "Wrst": 71.61,
+                "StDev": 21.896
+            },
+            {
+                "count": 8,
+                "host": "dmzgwc-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.699,
+                "Avg": 7.327,
+                "Best": 5.339,
+                "Wrst": 13.041,
+                "StDev": 2.237
+            },
+            {
+                "count": 9,
+                "host": "extgwc-eth11-1-dmzgwc-eth7-1.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.419,
+                "Avg": 7.644,
+                "Best": 5.012,
+                "Wrst": 10.832,
+                "StDev": 1.917
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 7.504,
+                "Avg": 19.888,
+                "Best": 6.073,
+                "Wrst": 115.15,
+                "StDev": 35.759
+            },
+            {
+                "count": 11,
+                "host": "4.35.90.14",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 6.867,
+                "Avg": 31.315,
+                "Best": 6.481,
+                "Wrst": 105.53,
+                "StDev": 34.017
+            },
+            {
+                "count": 12,
+                "host": "162.158.61.139",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 18.12,
+                "Avg": 26.058,
+                "Best": 7.557,
+                "Wrst": 77.527,
+                "StDev": 19.802
+            },
+            {
+                "count": 13,
+                "host": "104.18.32.7",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 6.903,
+                "Avg": 9.154,
+                "Best": 6.295,
+                "Wrst": 16.878,
+                "StDev": 3.48
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "emol.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 28.171,
+                "Avg": 39.685,
+                "Best": 3.903,
+                "Wrst": 218.5,
+                "StDev": 64.198
+            },
+            {
+                "count": 2,
+                "host": "coregwd-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.707,
+                "Avg": 21.177,
+                "Best": 4.184,
+                "Wrst": 158.17,
+                "StDev": 48.149
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo2-18-coregwd.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.158,
+                "Avg": 37.307,
+                "Best": 3.98,
+                "Wrst": 95.598,
+                "StDev": 39.531
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 36.928,
+                "Avg": 28.669,
+                "Best": 4.886,
+                "Wrst": 61.115,
+                "StDev": 19.604
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.951,
+                "Avg": 6.431,
+                "Best": 5.315,
+                "Wrst": 9.86,
+                "StDev": 1.341
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 4.98,
+                "Avg": 55.829,
+                "Best": 4.98,
+                "Wrst": 428.53,
+                "StDev": 139.99
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 7.583,
+                "Avg": 43.246,
+                "Best": 5.74,
+                "Wrst": 365.03,
+                "StDev": 113.08
+            },
+            {
+                "count": 8,
+                "host": "dmzgwd-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.06,
+                "Avg": 45.98,
+                "Best": 4.859,
+                "Wrst": 302.74,
+                "StDev": 95.175
+            },
+            {
+                "count": 9,
+                "host": "10.254.255.109",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 49.051,
+                "Avg": 71.493,
+                "Best": 10.922,
+                "Wrst": 241.36,
+                "StDev": 62.869
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 20.0,
+                "Snt": 10,
+                "Last": 14.113,
+                "Avg": 34.402,
+                "Best": 7.048,
+                "Wrst": 182.2,
+                "StDev": 60.039
+            },
+            {
+                "count": 11,
+                "host": "ae2.3601.edge1.sgo1.ciriontechnologies.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 119.27,
+                "Avg": 139.29,
+                "Best": 119.27,
+                "Wrst": 229.25,
+                "StDev": 32.891
+            },
+            {
+                "count": 12,
+                "host": "8.243.188.118",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 172.41,
+                "Avg": 174.15,
+                "Best": 125.25,
+                "Wrst": 202.14,
+                "StDev": 24.328
+            },
+            {
+                "count": 13,
+                "host": "200.27.175.246",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 131.42,
+                "Avg": 139.16,
+                "Best": 131.06,
+                "Wrst": 148.84,
+                "StDev": 6.529
+            },
+            {
+                "count": 14,
+                "host": "200.14.212.63",
+                "Loss%": 60.0,
+                "Snt": 10,
+                "Last": 131.12,
+                "Avg": 164.31,
+                "Best": 129.61,
+                "Wrst": 266.83,
+                "StDev": 68.345
+            },
+            {
+                "count": 15,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 16,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 17,
+                "host": "200.12.19.11",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 140.39,
+                "Avg": 250.12,
+                "Best": 133.0,
+                "Wrst": 580.57,
+                "StDev": 137.82
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "metoffice.gov.uk",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 40.896,
+                "Avg": 20.997,
+                "Best": 3.787,
+                "Wrst": 73.142,
+                "StDev": 25.333
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.786,
+                "Avg": 38.291,
+                "Best": 4.786,
+                "Wrst": 98.072,
+                "StDev": 35.521
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.221,
+                "Avg": 27.47,
+                "Best": 5.589,
+                "Wrst": 83.316,
+                "StDev": 26.742
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 3.701,
+                "Avg": 17.688,
+                "Best": 3.701,
+                "Wrst": 96.873,
+                "StDev": 29.024
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 8.196,
+                "Avg": 6.23,
+                "Best": 4.726,
+                "Wrst": 8.196,
+                "StDev": 1.186
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.21,
+                "Avg": 7.186,
+                "Best": 4.769,
+                "Wrst": 12.816,
+                "StDev": 2.959
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 43.267,
+                "Avg": 10.664,
+                "Best": 5.691,
+                "Wrst": 43.267,
+                "StDev": 11.522
+            },
+            {
+                "count": 8,
+                "host": "dmzgwc-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 20.691,
+                "Avg": 8.561,
+                "Best": 5.949,
+                "Wrst": 20.691,
+                "StDev": 4.538
+            },
+            {
+                "count": 9,
+                "host": "extgwc-eth11-1-dmzgwc-eth7-1.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 30.255,
+                "Avg": 10.079,
+                "Best": 5.185,
+                "Wrst": 30.255,
+                "StDev": 8.171
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 98.315,
+                "Avg": 17.508,
+                "Best": 6.094,
+                "Wrst": 98.315,
+                "StDev": 28.485
+            },
+            {
+                "count": 11,
+                "host": "6453-3356-nyc.sp.lumen.tech",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 48.962,
+                "Avg": 26.112,
+                "Best": 6.941,
+                "Wrst": 83.301,
+                "StDev": 29.462
+            },
+            {
+                "count": 12,
+                "host": "if-bundle-5-2.qcore2.nto-newyork.as6453.net",
+                "Loss%": 70.0,
+                "Snt": 10,
+                "Last": 118.33,
+                "Avg": 129.32,
+                "Best": 104.73,
+                "Wrst": 164.89,
+                "StDev": 31.551
+            },
+            {
+                "count": 13,
+                "host": "if-bundle-10-2.qcore2.ldn-london.as6453.net",
+                "Loss%": 50.0,
+                "Snt": 10,
+                "Last": 97.473,
+                "Avg": 116.03,
+                "Best": 97.153,
+                "Wrst": 181.0,
+                "StDev": 36.401
+            },
+            {
+                "count": 14,
+                "host": "195.219.213.128",
+                "Loss%": 60.0,
+                "Snt": 10,
+                "Last": 97.042,
+                "Avg": 102.88,
+                "Best": 96.235,
+                "Wrst": 117.9,
+                "StDev": 10.17
+            },
+            {
+                "count": 15,
+                "host": "if-bundle-13-2.qcore2.pye-paris.as6453.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 97.675,
+                "Avg": 100.51,
+                "Best": 95.805,
+                "Wrst": 119.71,
+                "StDev": 7.552
+            },
+            {
+                "count": 16,
+                "host": "if-bundle-2-2.qcore1.pye-paris.as6453.net",
+                "Loss%": 30.0,
+                "Snt": 10,
+                "Last": 95.501,
+                "Avg": 96.983,
+                "Best": 95.099,
+                "Wrst": 101.39,
+                "StDev": 2.262
+            },
+            {
+                "count": 17,
+                "host": "if-bundle-22-2.qcore1.pvu-paris.as6453.net",
+                "Loss%": 60.0,
+                "Snt": 10,
+                "Last": 98.655,
+                "Avg": 100.88,
+                "Best": 96.783,
+                "Wrst": 110.81,
+                "StDev": 6.661
+            },
+            {
+                "count": 18,
+                "host": "if-bundle-12-2.qcore2.pvu-paris.as6453.net",
+                "Loss%": 70.0,
+                "Snt": 10,
+                "Last": 95.687,
+                "Avg": 97.723,
+                "Best": 95.687,
+                "Wrst": 101.45,
+                "StDev": 3.228
+            },
+            {
+                "count": 19,
+                "host": "if-bundle-56-2.qcore1.fr0-frankfurt.as6453.net",
+                "Loss%": 90.0,
+                "Snt": 10,
+                "Last": 104.93,
+                "Avg": 104.93,
+                "Best": 104.93,
+                "Wrst": 104.93,
+                "StDev": 0.0
+            },
+            {
+                "count": 20,
+                "host": "if-bundle-66-2.qcore2.fnm-frankfurt.as6453.net",
+                "Loss%": 80.0,
+                "Snt": 10,
+                "Last": 138.72,
+                "Avg": 118.76,
+                "Best": 98.805,
+                "Wrst": 138.72,
+                "StDev": 28.221
+            },
+            {
+                "count": 21,
+                "host": "a23-49-110-95.deploy.static.akamaitechnologies.com",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 184.93,
+                "Avg": 155.05,
+                "Best": 114.41,
+                "Wrst": 201.53,
+                "StDev": 35.261
+            }
+        ]
+    }
+}
+{
+    "report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "reuters.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.258,
+                "Avg": 9.016,
+                "Best": 4.258,
+                "Wrst": 30.963,
+                "StDev": 8.531
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.321,
+                "Avg": 6.864,
+                "Best": 4.321,
+                "Wrst": 16.333,
+                "StDev": 3.82
+            },
+            {
+                "count": 3,
+                "host": "nyugwb-fo1-18-coregwc.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.903,
+                "Avg": 6.047,
+                "Best": 4.268,
+                "Wrst": 7.768,
+                "StDev": 1.171
+            },
+            {
+                "count": 4,
+                "host": "ngfw-palo-vl201.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 15.157,
+                "Avg": 14.878,
+                "Best": 4.997,
+                "Wrst": 69.582,
+                "StDev": 19.548
+            },
+            {
+                "count": 5,
+                "host": "nyugwa-vl3090.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.716,
+                "Avg": 7.53,
+                "Best": 4.823,
+                "Wrst": 12.639,
+                "StDev": 2.299
+            },
+            {
+                "count": 6,
+                "host": "vl3000-nyunatb.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 6.28,
+                "Avg": 7.854,
+                "Best": 4.663,
+                "Wrst": 11.736,
+                "StDev": 2.35
+            },
+            {
+                "count": 7,
+                "host": "dmzgwb-vl755.net.nyu.edu",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 7.915,
+                "Avg": 7.713,
+                "Best": 5.819,
+                "Wrst": 9.976,
+                "StDev": 1.284
+            },
+            {
+                "count": 8,
+                "host": "dmzgwc-e13-1-nyugwa.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 5.75,
+                "Avg": 9.055,
+                "Best": 4.904,
+                "Wrst": 19.092,
+                "StDev": 4.371
+            },
+            {
+                "count": 9,
+                "host": "extgwc-eth11-1-dmzgwc-eth7-1.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 15.209,
+                "Avg": 8.148,
+                "Best": 5.557,
+                "Wrst": 15.209,
+                "StDev": 2.788
+            },
+            {
+                "count": 10,
+                "host": "et-2-0-21.edge2.newyork6.level3.net",
+                "Loss%": 10.0,
+                "Snt": 10,
+                "Last": 7.132,
+                "Avg": 8.861,
+                "Best": 5.73,
+                "Wrst": 15.22,
+                "StDev": 3.243
+            },
+            {
+                "count": 11,
+                "host": "ae1.42.bar3.minneapolis2.net.lumen.tech",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 34.005,
+                "Avg": 39.028,
+                "Best": 33.965,
+                "Wrst": 64.855,
+                "StDev": 9.283
+            },
+            {
+                "count": 12,
+                "host": "4.4.254.226",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 33.905,
+                "Avg": 39.544,
+                "Best": 33.905,
+                "Wrst": 57.137,
+                "StDev": 6.961
+            },
+            {
+                "count": 13,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 14,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 15,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 16,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 17,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 10,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 18,
+                "host": "thomsonreuters.com.sg",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 36.367,
+                "Avg": 38.162,
+                "Best": 35.591,
+                "Wrst": 42.821,
+                "StDev": 2.643
+            }
+        ]
+    }
+}

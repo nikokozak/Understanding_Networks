@@ -1,0 +1,113 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "tdbank.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 8.707,
+                "Avg": 13.903,
+                "Best": 4.758,
+                "Wrst": 48.905,
+                "StDev": 14.567
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 6.899,
+                "Avg": 8.794,
+                "Best": 5.762,
+                "Wrst": 13.078,
+                "StDev": 2.782
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 9.012,
+                "Avg": 13.275,
+                "Best": 8.6,
+                "Wrst": 20.041,
+                "StDev": 4.096
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 6,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 7,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 8,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 9,
+                "host": "a23-200-88-68.deploy.static.akamaitechnologies.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 13.064,
+                "Avg": 11.839,
+                "Best": 6.853,
+                "Wrst": 19.08,
+                "StDev": 3.845
+            }
+        ]
+    }
+}

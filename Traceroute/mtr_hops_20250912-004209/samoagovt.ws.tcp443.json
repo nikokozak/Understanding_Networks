@@ -1,0 +1,124 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "samoagovt.ws",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 4.226,
+                "Avg": 4.308,
+                "Best": 3.328,
+                "Wrst": 5.764,
+                "StDev": 0.929
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 9.591,
+                "Avg": 8.901,
+                "Best": 6.775,
+                "Wrst": 10.64,
+                "StDev": 1.407
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 11.142,
+                "Avg": 9.027,
+                "Best": 5.802,
+                "Wrst": 11.487,
+                "StDev": 2.157
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 6,
+                "host": "be2236.ccr41.jfk02.atlas.cogentco.com",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 8.817,
+                "Avg": 10.317,
+                "Best": 8.817,
+                "Wrst": 11.356,
+                "StDev": 0.98
+            },
+            {
+                "count": 7,
+                "host": "port-channel8073.ccr91.dca04.atlas.cogentco.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 17.555,
+                "Avg": 16.889,
+                "Best": 13.451,
+                "Wrst": 19.245,
+                "StDev": 1.902
+            },
+            {
+                "count": 8,
+                "host": "be3026.ccr41.iad02.atlas.cogentco.com",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 16.636,
+                "Avg": 16.524,
+                "Best": 13.818,
+                "Wrst": 19.856,
+                "StDev": 1.949
+            },
+            {
+                "count": 9,
+                "host": "38.122.62.194",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 16.313,
+                "Avg": 16.421,
+                "Best": 14.809,
+                "Wrst": 18.304,
+                "StDev": 1.287
+            },
+            {
+                "count": 10,
+                "host": "cloudproxy10128.sucuri.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 14.278,
+                "Avg": 14.776,
+                "Best": 12.537,
+                "Wrst": 17.569,
+                "StDev": 1.634
+            }
+        ]
+    }
+}

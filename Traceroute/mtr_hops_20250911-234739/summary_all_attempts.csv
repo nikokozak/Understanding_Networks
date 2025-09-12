@@ -1,0 +1,37 @@
+host,tag,hops,file,error
+emol.com,tcp443,12,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/emol.com.tcp443.json,
+emol.com,tcp80,12,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/emol.com.tcp80.json,
+emol.com,udp,11,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/emol.com.udp.json,
+emol.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/emol.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+github.com,tcp80,13,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/github.com.tcp80.json,
+github.com,tcp443,13,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/github.com.tcp443.json,
+github.com,udp,10,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/github.com.udp.json,
+github.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/github.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+google.com,udp,10,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/google.com.udp.json,
+google.com,tcp443,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/google.com.tcp443.json,
+google.com,tcp80,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/google.com.tcp80.json,
+google.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/google.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+metoffice.gov.uk,tcp80,9,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/metoffice.gov.uk.tcp80.json,
+metoffice.gov.uk,tcp443,9,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/metoffice.gov.uk.tcp443.json,
+metoffice.gov.uk,udp,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/metoffice.gov.uk.udp.json,
+metoffice.gov.uk,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/metoffice.gov.uk.icmp.json,Expecting value: line 1 column 1 (char 0)
+news.ycombinator.com,tcp443,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/news.ycombinator.com.tcp443.json,
+news.ycombinator.com,udp,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/news.ycombinator.com.udp.json,
+news.ycombinator.com,tcp80,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/news.ycombinator.com.tcp80.json,
+news.ycombinator.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/news.ycombinator.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+reddit.com,tcp443,6,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reddit.com.tcp443.json,
+reddit.com,tcp80,6,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reddit.com.tcp80.json,
+reddit.com,udp,5,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reddit.com.udp.json,
+reddit.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reddit.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+reuters.com,tcp443,13,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reuters.com.tcp443.json,
+reuters.com,tcp80,13,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reuters.com.tcp80.json,
+reuters.com,udp,8,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reuters.com.udp.json,
+reuters.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reuters.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+stackoverflow.com,udp,7,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/stackoverflow.com.udp.json,
+stackoverflow.com,tcp443,7,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/stackoverflow.com.tcp443.json,
+stackoverflow.com,tcp80,7,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/stackoverflow.com.tcp80.json,
+stackoverflow.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/stackoverflow.com.icmp.json,Expecting value: line 1 column 1 (char 0)
+tdbank.com,udp,9,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/tdbank.com.udp.json,
+tdbank.com,tcp80,9,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/tdbank.com.tcp80.json,
+tdbank.com,tcp443,9,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/tdbank.com.tcp443.json,
+tdbank.com,icmp,0,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/tdbank.com.icmp.json,Expecting value: line 1 column 1 (char 0)

@@ -1,0 +1,9 @@
+ 13  github.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/github.com.tcp443.json
+ 13  reuters.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reuters.com.tcp443.json
+ 12  emol.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/emol.com.tcp443.json
+ 10  google.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/google.com.udp.json
+  9  tdbank.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/tdbank.com.udp.json
+  9  metoffice.gov.uk  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/metoffice.gov.uk.tcp443.json
+  8  news.ycombinator.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/news.ycombinator.com.udp.json
+  7  stackoverflow.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/stackoverflow.com.udp.json
+  6  reddit.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250911-234739/reddit.com.tcp443.json

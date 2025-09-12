@@ -1,0 +1,113 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "kiribati.gov.ki",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 3.711,
+                "Avg": 4.284,
+                "Best": 2.92,
+                "Wrst": 5.86,
+                "StDev": 1.203
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 5.413,
+                "Avg": 6.371,
+                "Best": 4.941,
+                "Wrst": 7.458,
+                "StDev": 0.97
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 14.512,
+                "Avg": 9.933,
+                "Best": 6.606,
+                "Wrst": 14.512,
+                "StDev": 2.751
+            },
+            {
+                "count": 4,
+                "host": "0.ae6.gw15.nyc1.alter.net",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 25.362,
+                "Avg": 15.478,
+                "Best": 10.857,
+                "Wrst": 25.362,
+                "StDev": 5.319
+            },
+            {
+                "count": 5,
+                "host": "63-218-235-33.static.as3491.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 13.332,
+                "Avg": 12.377,
+                "Best": 7.117,
+                "Wrst": 17.161,
+                "StDev": 3.351
+            },
+            {
+                "count": 6,
+                "host": "hundredge0-5-0-0.br03.sin02.as3491.net",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 267.03,
+                "Avg": 262.94,
+                "Best": 257.31,
+                "Wrst": 267.03,
+                "StDev": 3.761
+            },
+            {
+                "count": 7,
+                "host": "63.217.59.34",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 263.21,
+                "Avg": 264.6,
+                "Best": 260.49,
+                "Wrst": 267.34,
+                "StDev": 2.37
+            },
+            {
+                "count": 8,
+                "host": "63.217.59.34",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 269.77,
+                "Avg": 263.32,
+                "Best": 259.61,
+                "Wrst": 269.77,
+                "StDev": 3.239
+            },
+            {
+                "count": 9,
+                "host": "sg1-tr2.supercp.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 261.06,
+                "Avg": 261.52,
+                "Best": 258.23,
+                "Wrst": 265.22,
+                "StDev": 2.885
+            }
+        ]
+    }
+}

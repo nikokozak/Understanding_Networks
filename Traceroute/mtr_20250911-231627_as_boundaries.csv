@@ -1,0 +1,23 @@
+destination,from_asn,from_name,to_asn,to_name,from_countries,to_countries,from_hop_end,to_hop_start,boundary_jump_ms
+tdbank.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,14.428999999999998
+tdbank.com,AS3356,"Level 3 Parent, LLC",AS20940,Akamai,United States,United States,12,13,0.0
+google.com,AS-NYU,NYU Campus Network,N/A,N/A,United States,United States,9,10,7.07
+google.com,N/A,N/A,AS15169,Google LLC,United States,United States,12,13,0.0
+reddit.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,58.20400000000001
+reddit.com,AS3356,"Level 3 Parent, LLC",AS54113,"Fastly, Inc.",United States,United States,11,12,7.937999999999999
+news.ycombinator.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,0.0
+news.ycombinator.com,AS3356,"Level 3 Parent, LLC",AS21581,M5 Computer Security,United States,United States,12,13,0.0
+github.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,10.030999999999999
+github.com,AS3356,"Level 3 Parent, LLC",AS6461,Zayo (heuristic),United States,N/A,10,11,11.741
+github.com,AS6461,Zayo (heuristic),AS36459,"GitHub, Inc.",N/A,United States,18,19,13.823
+stackoverflow.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,12.244000000000002
+stackoverflow.com,AS3356,"Level 3 Parent, LLC",AS13335,"Cloudflare, Inc.",United States,United States,11,12,0.0
+emol.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,0.0
+emol.com,AS3356,"Level 3 Parent, LLC",AS26599,Cirion (heuristic),United States,N/A,10,11,104.88799999999999
+emol.com,AS26599,Cirion (heuristic),AS3356,"Level 3 Parent, LLC",N/A,Chile,11,12,34.860000000000014
+emol.com,AS3356,"Level 3 Parent, LLC",AS6429,Telmex Chile Internet S.A.,Chile,Chile,12,13,0.0
+metoffice.gov.uk,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,7.4289999999999985
+metoffice.gov.uk,AS3356,"Level 3 Parent, LLC",AS6453,TATA COMMUNICATIONS (AMERICA) INC,United States,France;Germany;United Kingdom;United States,11,12,103.208
+metoffice.gov.uk,AS6453,TATA COMMUNICATIONS (AMERICA) INC,AS16625,"Akamai Technologies, Inc.",France;Germany;United Kingdom;United States,Sweden,20,21,36.290000000000006
+reuters.com,AS-NYU,NYU Campus Network,AS3356,"Level 3 Parent, LLC",United States,United States,9,10,0.713000000000001
+reuters.com,AS3356,"Level 3 Parent, LLC",AS4583,West Publishing Corporation,United States,United States,17,18,38.162

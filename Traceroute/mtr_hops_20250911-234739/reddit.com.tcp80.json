@@ -1,0 +1,80 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "reddit.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 5.777,
+                "Avg": 5.398,
+                "Best": 4.302,
+                "Wrst": 6.325,
+                "StDev": 0.823
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 6.424,
+                "Avg": 8.856,
+                "Best": 5.905,
+                "Wrst": 12.702,
+                "StDev": 2.703
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 10.467,
+                "Avg": 11.392,
+                "Best": 9.515,
+                "Wrst": 14.137,
+                "StDev": 1.744
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "customer.alter.net",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 11.135,
+                "Avg": 13.125,
+                "Best": 8.986,
+                "Wrst": 17.857,
+                "StDev": 3.762
+            },
+            {
+                "count": 6,
+                "host": "151.101.1.140",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 11.689,
+                "Avg": 10.191,
+                "Best": 6.985,
+                "Wrst": 14.28,
+                "StDev": 2.178
+            }
+        ]
+    }
+}

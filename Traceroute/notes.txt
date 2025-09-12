@@ -1,0 +1,54 @@
+Common hosts I'm usually looking at:
+`(find in hosts.txt)`
+
+Command to run for `mtr` discovery:
+mtr --filename hosts.txt --report-wide --json >> mtr_report.json
+
+This gives us a JSON file with the results of the `mtr` command for each host in `hosts.txt`.
+We can then parse this JSON file to extract the relevant information for each host, using basic python scripting or any other tool of choice.
+
+The result is a file that contains results like this:
+```json
+"report": {
+        "mtr": {
+            "src": "10-20-17-251.dynapool.wireless.nyu.edu",
+            "dst": "reuters.com",
+            "tos": 0,
+            "tests": 10,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "wlangwc-7e12-vl1471.wireless.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.258,
+                "Avg": 9.016,
+                "Best": 4.258,
+                "Wrst": 30.963,
+                "StDev": 8.531
+            },
+            {
+                "count": 2,
+                "host": "coregwc-te7-8-vl901-wlangwc-7e12.net.nyu.edu",
+                "Loss%": 0.0,
+                "Snt": 10,
+                "Last": 4.321,
+                "Avg": 6.864,
+                "Best": 4.321,
+                "Wrst": 16.333,
+                "StDev": 3.82
+            },
+```
+And so on...
+
+The nice thing about mtr, aside from its dynamic nature when used in the command line, is that it provides us with a pretty clean and accessible format for each packet's information. We can clearnerly see the statistics for each hop along the way to the destination, including packet loss, average latency, best and worst times, and standard deviation.
+
+## Potential Analysis
+
+Look at jumps between nodes; latency therein.
+Jitter analysis (unstable vs. stable nodes).
+Providence/peering -> see what happens the moment we jump from NYU outwards.
+

@@ -1,0 +1,135 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "emol.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 4.908,
+                "Avg": 6.156,
+                "Best": 2.979,
+                "Wrst": 15.821,
+                "StDev": 4.074
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 7.53,
+                "Avg": 8.059,
+                "Best": 5.608,
+                "Wrst": 11.091,
+                "StDev": 2.027
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 10.223,
+                "Avg": 11.621,
+                "Best": 5.55,
+                "Wrst": 21.28,
+                "StDev": 5.323
+            },
+            {
+                "count": 4,
+                "host": "lag-1.asbnvaeg-ppr01-cc.alter.net",
+                "Loss%": 75.0,
+                "Snt": 8,
+                "Last": 14.682,
+                "Avg": 17.001,
+                "Best": 14.682,
+                "Wrst": 19.32,
+                "StDev": 3.279
+            },
+            {
+                "count": 5,
+                "host": "63.81.61.74",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 14.896,
+                "Avg": 15.026,
+                "Best": 12.473,
+                "Wrst": 23.605,
+                "StDev": 3.6
+            },
+            {
+                "count": 6,
+                "host": "213.140.35.116",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 141.04,
+                "Avg": 150.3,
+                "Best": 141.04,
+                "Wrst": 196.63,
+                "StDev": 18.816
+            },
+            {
+                "count": 7,
+                "host": "5.53.3.66",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 147.32,
+                "Avg": 146.41,
+                "Best": 144.83,
+                "Wrst": 149.24,
+                "StDev": 1.464
+            },
+            {
+                "count": 8,
+                "host": "213.140.39.91",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 143.64,
+                "Avg": 141.87,
+                "Best": 137.94,
+                "Wrst": 145.9,
+                "StDev": 2.449
+            },
+            {
+                "count": 9,
+                "host": "nap96ppal02.lo0.red.ppal.nap.movistar.cl",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 139.66,
+                "Avg": 141.99,
+                "Best": 139.66,
+                "Wrst": 145.73,
+                "StDev": 1.867
+            },
+            {
+                "count": 10,
+                "host": "186-148-19-142.static.mundo.movistar.cl",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 139.74,
+                "Avg": 140.66,
+                "Best": 137.94,
+                "Wrst": 144.68,
+                "StDev": 2.636
+            },
+            {
+                "count": 11,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            }
+        ]
+    }
+}

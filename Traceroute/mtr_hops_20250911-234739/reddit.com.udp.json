@@ -1,0 +1,69 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "reddit.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.144,
+                "Avg": 5.34,
+                "Best": 3.268,
+                "Wrst": 8.838,
+                "StDev": 1.611
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.052,
+                "Avg": 7.454,
+                "Best": 4.19,
+                "Wrst": 11.774,
+                "StDev": 3.037
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 9.853,
+                "Avg": 9.453,
+                "Best": 7.673,
+                "Wrst": 11.649,
+                "StDev": 1.192
+            },
+            {
+                "count": 4,
+                "host": "100.bundle-ether104.whplnywp-mse01-bb-su1.alter.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.765,
+                "Avg": 8.254,
+                "Best": 5.765,
+                "Wrst": 10.676,
+                "StDev": 1.897
+            },
+            {
+                "count": 5,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            }
+        ]
+    }
+}

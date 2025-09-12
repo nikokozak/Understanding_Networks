@@ -1,0 +1,168 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "presidence.gov.bi",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 11.237,
+                "Avg": 5.745,
+                "Best": 3.444,
+                "Wrst": 11.237,
+                "StDev": 2.75
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 13.56,
+                "Avg": 7.742,
+                "Best": 5.008,
+                "Wrst": 13.56,
+                "StDev": 2.896
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 11.241,
+                "Avg": 9.551,
+                "Best": 7.705,
+                "Wrst": 12.384,
+                "StDev": 1.887
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "alter.net.customer.alter.net",
+                "Loss%": 37.5,
+                "Snt": 8,
+                "Last": 8.774,
+                "Avg": 18.765,
+                "Best": 7.28,
+                "Wrst": 41.362,
+                "StDev": 14.228
+            },
+            {
+                "count": 6,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 7,
+                "host": "212.133.82.106",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 106.83,
+                "Avg": 108.46,
+                "Best": 106.83,
+                "Wrst": 110.15,
+                "StDev": 1.275
+            },
+            {
+                "count": 8,
+                "host": "et-1-1-9.lke-p1-msa.liquidtelecom.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 225.22,
+                "Avg": 227.28,
+                "Best": 222.47,
+                "Wrst": 243.86,
+                "StDev": 7.645
+            },
+            {
+                "count": 9,
+                "host": "41.175.226.26",
+                "Loss%": 50.0,
+                "Snt": 8,
+                "Last": 224.61,
+                "Avg": 214.26,
+                "Best": 209.84,
+                "Wrst": 224.61,
+                "StDev": 7.012
+            },
+            {
+                "count": 10,
+                "host": "et-0-1-5.lrw-p1-kgl.liquidtelecom.net",
+                "Loss%": 37.5,
+                "Snt": 8,
+                "Last": 224.85,
+                "Avg": 222.79,
+                "Best": 214.43,
+                "Wrst": 226.16,
+                "StDev": 4.784
+            },
+            {
+                "count": 11,
+                "host": "et-0-1-5.lrw-p1-kgl.liquidtelecom.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 222.78,
+                "Avg": 222.61,
+                "Best": 221.88,
+                "Wrst": 224.22,
+                "StDev": 0.773
+            },
+            {
+                "count": 12,
+                "host": "et-0-0-1.pe2.rw.liquidtelecom.net",
+                "Loss%": 75.0,
+                "Snt": 8,
+                "Last": 225.53,
+                "Avg": 224.07,
+                "Best": 222.62,
+                "Wrst": 225.53,
+                "StDev": 2.058
+            },
+            {
+                "count": 13,
+                "host": "41.79.227.170",
+                "Loss%": 37.5,
+                "Snt": 8,
+                "Last": 226.63,
+                "Avg": 226.78,
+                "Best": 225.38,
+                "Wrst": 228.94,
+                "StDev": 1.308
+            },
+            {
+                "count": 14,
+                "host": "dns0.bbs.bi",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 227.62,
+                "Avg": 227.03,
+                "Best": 225.44,
+                "Wrst": 228.83,
+                "StDev": 1.154
+            }
+        ]
+    }
+}

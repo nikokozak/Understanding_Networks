@@ -1,0 +1,17 @@
+host,hops,tag,file
+gov.rw,20,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/gov.rw.udp.json
+gov.vu,20,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/gov.vu.udp.json
+egov.sc,16,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/egov.sc.udp.json
+presidence.gov.bi,15,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/presidence.gov.bi.udp.json
+github.com,13,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/github.com.tcp443.json
+reuters.com,13,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/reuters.com.tcp443.json
+emol.com,12,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/emol.com.tcp443.json
+kiribati.gov.ki,10,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/kiribati.gov.ki.udp.json
+solomons.gov.sb,10,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/solomons.gov.sb.tcp443.json
+samoagovt.ws,10,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/samoagovt.ws.tcp443.json
+tdbank.com,9,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/tdbank.com.udp.json
+google.com,9,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/google.com.udp.json
+metoffice.gov.uk,9,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/metoffice.gov.uk.tcp443.json
+news.ycombinator.com,8,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/news.ycombinator.com.udp.json
+stackoverflow.com,7,udp,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/stackoverflow.com.udp.json
+reddit.com,6,tcp443,/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/reddit.com.tcp443.json

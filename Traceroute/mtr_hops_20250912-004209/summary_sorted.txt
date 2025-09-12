@@ -1,0 +1,16 @@
+ 20  gov.rw  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/gov.rw.udp.json
+ 20  gov.vu  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/gov.vu.udp.json
+ 16  egov.sc  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/egov.sc.udp.json
+ 15  presidence.gov.bi  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/presidence.gov.bi.udp.json
+ 13  github.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/github.com.tcp443.json
+ 13  reuters.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/reuters.com.tcp443.json
+ 12  emol.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/emol.com.tcp443.json
+ 10  kiribati.gov.ki  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/kiribati.gov.ki.udp.json
+ 10  solomons.gov.sb  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/solomons.gov.sb.tcp443.json
+ 10  samoagovt.ws  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/samoagovt.ws.tcp443.json
+  9  tdbank.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/tdbank.com.udp.json
+  9  google.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/google.com.udp.json
+  9  metoffice.gov.uk  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/metoffice.gov.uk.tcp443.json
+  8  news.ycombinator.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/news.ycombinator.com.udp.json
+  7  stackoverflow.com  via udp     file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/stackoverflow.com.udp.json
+  6  reddit.com  via tcp443  file=/Users/niko/Documents/ITP/Understanding-Networks/Traceroute/mtr_hops_20250912-004209/reddit.com.tcp443.json

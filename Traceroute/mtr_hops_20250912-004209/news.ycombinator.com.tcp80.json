@@ -1,0 +1,102 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "news.ycombinator.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 8.675,
+                "Avg": 5.747,
+                "Best": 4.803,
+                "Wrst": 8.675,
+                "StDev": 1.329
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 7.687,
+                "Avg": 8.99,
+                "Best": 5.388,
+                "Wrst": 15.079,
+                "StDev": 3.087
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 11.424,
+                "Avg": 11.589,
+                "Best": 8.987,
+                "Wrst": 13.11,
+                "StDev": 1.412
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 6,
+                "host": "ae0.11.bar1.sandiego1.net.lumen.tech",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 69.322,
+                "Avg": 74.179,
+                "Best": 68.471,
+                "Wrst": 96.486,
+                "StDev": 10.016
+            },
+            {
+                "count": 7,
+                "host": "giglinx-inc.bar1.sandiego1.level3.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 70.399,
+                "Avg": 71.095,
+                "Best": 68.662,
+                "Wrst": 72.82,
+                "StDev": 1.325
+            },
+            {
+                "count": 8,
+                "host": "news.ycombinator.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 70.231,
+                "Avg": 70.479,
+                "Best": 68.639,
+                "Wrst": 74.683,
+                "StDev": 1.907
+            }
+        ]
+    }
+}

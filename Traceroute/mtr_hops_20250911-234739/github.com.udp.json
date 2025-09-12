@@ -1,0 +1,124 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "github.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.464,
+                "Avg": 5.186,
+                "Best": 3.766,
+                "Wrst": 9.561,
+                "StDev": 1.861
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 4.137,
+                "Avg": 12.298,
+                "Best": 4.137,
+                "Wrst": 19.2,
+                "StDev": 6.056
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 11.063,
+                "Avg": 11.93,
+                "Best": 6.463,
+                "Wrst": 20.006,
+                "StDev": 4.758
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "ewr-b13-link.ip.twelve99.net",
+                "Loss%": 50.0,
+                "Snt": 8,
+                "Last": 8.367,
+                "Avg": 8.88,
+                "Best": 7.891,
+                "Wrst": 11.06,
+                "StDev": 1.465
+            },
+            {
+                "count": 6,
+                "host": "ewr-bb2-link.ip.twelve99.net",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 8.936,
+                "Avg": 10.423,
+                "Best": 8.476,
+                "Wrst": 14.794,
+                "StDev": 2.345
+            },
+            {
+                "count": 7,
+                "host": "ash-bb2-link.ip.twelve99.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 12.235,
+                "Avg": 15.048,
+                "Best": 11.855,
+                "Wrst": 20.874,
+                "StDev": 3.173
+            },
+            {
+                "count": 8,
+                "host": "rest-b2-link.ip.twelve99.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 15.961,
+                "Avg": 16.238,
+                "Best": 13.684,
+                "Wrst": 18.508,
+                "StDev": 1.678
+            },
+            {
+                "count": 9,
+                "host": "github-ic-368832.ip.twelve99-cust.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 13.804,
+                "Avg": 16.861,
+                "Best": 11.214,
+                "Wrst": 20.984,
+                "StDev": 3.273
+            },
+            {
+                "count": 10,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            }
+        ]
+    }
+}

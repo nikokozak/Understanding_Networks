@@ -1,0 +1,234 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "gov.rw",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 4.197,
+                "Avg": 3.825,
+                "Best": 3.133,
+                "Wrst": 4.827,
+                "StDev": 0.559
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 7.297,
+                "Avg": 16.255,
+                "Best": 6.07,
+                "Wrst": 60.504,
+                "StDev": 19.663
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 10.706,
+                "Avg": 8.475,
+                "Best": 6.747,
+                "Wrst": 10.706,
+                "StDev": 1.451
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "alter.net.customer.alter.net",
+                "Loss%": 50.0,
+                "Snt": 8,
+                "Last": 7.509,
+                "Avg": 11.977,
+                "Best": 7.509,
+                "Wrst": 21.54,
+                "StDev": 6.599
+            },
+            {
+                "count": 6,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 7,
+                "host": "212.187.165.246",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 77.947,
+                "Avg": 78.644,
+                "Best": 76.691,
+                "Wrst": 83.587,
+                "StDev": 2.355
+            },
+            {
+                "count": 8,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 9,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 10,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 11,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 12,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 13,
+                "host": "41.78.188.165",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 237.95,
+                "Avg": 237.25,
+                "Best": 234.89,
+                "Wrst": 239.19,
+                "StDev": 1.455
+            },
+            {
+                "count": 14,
+                "host": "197.157.72.133",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 242.55,
+                "Avg": 242.81,
+                "Best": 240.7,
+                "Wrst": 247.2,
+                "StDev": 2.076
+            },
+            {
+                "count": 15,
+                "host": "197.243.126.193",
+                "Loss%": 14.285,
+                "Snt": 7,
+                "Last": 237.47,
+                "Avg": 242.11,
+                "Best": 236.28,
+                "Wrst": 266.11,
+                "StDev": 11.775
+            },
+            {
+                "count": 16,
+                "host": "197.243.126.26",
+                "Loss%": 14.285,
+                "Snt": 7,
+                "Last": 236.29,
+                "Avg": 235.14,
+                "Best": 233.77,
+                "Wrst": 236.29,
+                "StDev": 0.92
+            },
+            {
+                "count": 17,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 7,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 18,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 7,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 19,
+                "host": "197.243.24.6",
+                "Loss%": 14.285,
+                "Snt": 7,
+                "Last": 236.37,
+                "Avg": 1403.1,
+                "Best": 233.98,
+                "Wrst": 3238.1,
+                "StDev": 1473.1
+            },
+            {
+                "count": 20,
+                "host": "197.243.22.155",
+                "Loss%": 14.285,
+                "Snt": 7,
+                "Last": 234.72,
+                "Avg": 236.45,
+                "Best": 234.11,
+                "Wrst": 238.97,
+                "StDev": 2.023
+            }
+        ]
+    }
+}

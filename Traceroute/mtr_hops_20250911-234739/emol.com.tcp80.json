@@ -1,0 +1,146 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "emol.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 11.436,
+                "Avg": 7.263,
+                "Best": 3.169,
+                "Wrst": 15.578,
+                "StDev": 4.527
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 6.201,
+                "Avg": 8.751,
+                "Best": 5.026,
+                "Wrst": 17.161,
+                "StDev": 4.491
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 9.295,
+                "Avg": 12.779,
+                "Best": 8.342,
+                "Wrst": 19.476,
+                "StDev": 4.02
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "63.81.61.74",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 14.158,
+                "Avg": 14.944,
+                "Best": 13.654,
+                "Wrst": 18.973,
+                "StDev": 1.812
+            },
+            {
+                "count": 6,
+                "host": "213.140.35.116",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 142.18,
+                "Avg": 143.81,
+                "Best": 142.18,
+                "Wrst": 146.09,
+                "StDev": 1.44
+            },
+            {
+                "count": 7,
+                "host": "5.53.3.66",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 144.11,
+                "Avg": 145.65,
+                "Best": 142.9,
+                "Wrst": 148.6,
+                "StDev": 2.037
+            },
+            {
+                "count": 8,
+                "host": "213.140.39.91",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 140.34,
+                "Avg": 141.79,
+                "Best": 139.37,
+                "Wrst": 144.91,
+                "StDev": 1.862
+            },
+            {
+                "count": 9,
+                "host": "nap96ppal02.lo0.red.ppal.nap.movistar.cl",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 145.44,
+                "Avg": 143.49,
+                "Best": 140.25,
+                "Wrst": 148.19,
+                "StDev": 2.772
+            },
+            {
+                "count": 10,
+                "host": "186-148-19-142.static.mundo.movistar.cl",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 138.72,
+                "Avg": 143.82,
+                "Best": 138.72,
+                "Wrst": 147.65,
+                "StDev": 3.198
+            },
+            {
+                "count": 11,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 12,
+                "host": "200.12.26.11",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 153.58,
+                "Avg": 146.94,
+                "Best": 142.89,
+                "Wrst": 153.58,
+                "StDev": 3.183
+            }
+        ]
+    }
+}

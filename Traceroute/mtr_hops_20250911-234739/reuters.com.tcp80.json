@@ -1,0 +1,157 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "reuters.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 7.179,
+                "Avg": 4.437,
+                "Best": 3.061,
+                "Wrst": 7.179,
+                "StDev": 1.317
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 7.147,
+                "Avg": 8.868,
+                "Best": 7.011,
+                "Wrst": 11.37,
+                "StDev": 1.801
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 11.091,
+                "Avg": 10.521,
+                "Best": 8.151,
+                "Wrst": 14.677,
+                "StDev": 2.475
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "alter.net.customer.alter.net",
+                "Loss%": 50.0,
+                "Snt": 8,
+                "Last": 17.501,
+                "Avg": 19.83,
+                "Best": 9.737,
+                "Wrst": 40.515,
+                "StDev": 14.181
+            },
+            {
+                "count": 6,
+                "host": "ae1.42.bar3.minneapolis2.net.lumen.tech",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 37.328,
+                "Avg": 39.959,
+                "Best": 37.328,
+                "Wrst": 42.78,
+                "StDev": 2.33
+            },
+            {
+                "count": 7,
+                "host": "4.4.254.226",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 34.498,
+                "Avg": 34.93,
+                "Best": 32.989,
+                "Wrst": 36.392,
+                "StDev": 1.046
+            },
+            {
+                "count": 8,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 9,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 10,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 11,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 12,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 13,
+                "host": "checkpointespana.es",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 37.698,
+                "Avg": 36.735,
+                "Best": 35.424,
+                "Wrst": 38.207,
+                "StDev": 1.146
+            }
+        ]
+    }
+}

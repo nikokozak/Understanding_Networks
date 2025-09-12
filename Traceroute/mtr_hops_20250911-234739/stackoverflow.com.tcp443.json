@@ -1,0 +1,91 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "stackoverflow.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 4.863,
+                "Avg": 5.821,
+                "Best": 4.052,
+                "Wrst": 11.463,
+                "StDev": 2.672
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 9.798,
+                "Avg": 8.455,
+                "Best": 6.319,
+                "Wrst": 11.124,
+                "StDev": 1.679
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 25.0,
+                "Snt": 8,
+                "Last": 8.511,
+                "Avg": 10.73,
+                "Best": 8.511,
+                "Wrst": 13.581,
+                "StDev": 1.954
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "customer.alter.net",
+                "Loss%": 37.5,
+                "Snt": 8,
+                "Last": 4011.8,
+                "Avg": 3817.9,
+                "Best": 12.625,
+                "Wrst": 7034.2,
+                "StDev": 2595.4
+            },
+            {
+                "count": 6,
+                "host": "162.158.61.133",
+                "Loss%": 75.0,
+                "Snt": 8,
+                "Last": 13.514,
+                "Avg": 11.41,
+                "Best": 9.306,
+                "Wrst": 13.514,
+                "StDev": 2.975
+            },
+            {
+                "count": 7,
+                "host": "104.18.32.7",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 7.468,
+                "Avg": 9.606,
+                "Best": 7.058,
+                "Wrst": 12.299,
+                "StDev": 2.043
+            }
+        ]
+    }
+}

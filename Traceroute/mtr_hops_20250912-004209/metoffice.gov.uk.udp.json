@@ -1,0 +1,102 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "metoffice.gov.uk",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 4.459,
+                "Avg": 5.288,
+                "Best": 3.41,
+                "Wrst": 12.777,
+                "StDev": 3.064
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 5.679,
+                "Avg": 6.91,
+                "Best": 4.328,
+                "Wrst": 10.01,
+                "StDev": 1.942
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.4",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 9.531,
+                "Avg": 9.471,
+                "Best": 7.254,
+                "Wrst": 12.102,
+                "StDev": 1.708
+            },
+            {
+                "count": 4,
+                "host": "0.ae1.gw16.nyc1.alter.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 8.642,
+                "Avg": 12.369,
+                "Best": 8.642,
+                "Wrst": 19.243,
+                "StDev": 3.462
+            },
+            {
+                "count": 5,
+                "host": "alter.net.customer.alter.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 8.593,
+                "Avg": 10.207,
+                "Best": 7.487,
+                "Wrst": 15.237,
+                "StDev": 2.644
+            },
+            {
+                "count": 6,
+                "host": "192.168.224.177",
+                "Loss%": 75.0,
+                "Snt": 8,
+                "Last": 12.103,
+                "Avg": 12.494,
+                "Best": 12.103,
+                "Wrst": 12.886,
+                "StDev": 0.553
+            },
+            {
+                "count": 7,
+                "host": "192.168.230.45",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 12.214,
+                "Avg": 15.101,
+                "Best": 10.667,
+                "Wrst": 19.99,
+                "StDev": 3.199
+            },
+            {
+                "count": 8,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            }
+        ]
+    }
+}

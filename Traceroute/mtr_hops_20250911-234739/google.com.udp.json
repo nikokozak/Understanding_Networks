@@ -1,0 +1,124 @@
+{
+    "report": {
+        "mtr": {
+            "src": "Nikolais-MBP",
+            "dst": "google.com",
+            "tos": 0,
+            "tests": 8,
+            "psize": "64",
+            "bitpattern": "0x00"
+        },
+        "hubs": [
+            {
+                "count": 1,
+                "host": "cr1000a.mynetworksettings.com",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 4.721,
+                "Avg": 5.821,
+                "Best": 3.848,
+                "Wrst": 11.441,
+                "StDev": 2.341
+            },
+            {
+                "count": 2,
+                "host": "lo0-100.nycmny-vfttp-447.verizon-gni.net",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 41.794,
+                "Avg": 21.846,
+                "Best": 6.391,
+                "Wrst": 73.102,
+                "StDev": 23.796
+            },
+            {
+                "count": 3,
+                "host": "100.41.26.2",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 7.817,
+                "Avg": 10.96,
+                "Best": 7.817,
+                "Wrst": 15.401,
+                "StDev": 2.248
+            },
+            {
+                "count": 4,
+                "host": "???",
+                "Loss%": 100.0,
+                "Snt": 8,
+                "Last": 0.0,
+                "Avg": 0.0,
+                "Best": 0.0,
+                "Wrst": 0.0,
+                "StDev": 0.0
+            },
+            {
+                "count": 5,
+                "host": "customer.alter.net",
+                "Loss%": 12.5,
+                "Snt": 8,
+                "Last": 6.266,
+                "Avg": 10.371,
+                "Best": 6.266,
+                "Wrst": 14.465,
+                "StDev": 2.918
+            },
+            {
+                "count": 6,
+                "host": "192.178.107.21",
+                "Loss%": 75.0,
+                "Snt": 8,
+                "Last": 11.6,
+                "Avg": 11.265,
+                "Best": 10.93,
+                "Wrst": 11.6,
+                "StDev": 0.473
+            },
+            {
+                "count": 7,
+                "host": "142.251.64.4",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 13.71,
+                "Avg": 11.955,
+                "Best": 7.907,
+                "Wrst": 18.396,
+                "StDev": 3.504
+            },
+            {
+                "count": 8,
+                "host": "142.251.60.231",
+                "Loss%": 0.0,
+                "Snt": 8,
+                "Last": 9.017,
+                "Avg": 10.614,
+                "Best": 6.994,
+                "Wrst": 15.772,
+                "StDev": 3.069
+            },
+            {
+                "count": 9,
+                "host": "142.251.69.62",
+                "Loss%": 0.0,
+                "Snt": 5,
+                "Last": 10.528,
+                "Avg": 10.799,
+                "Best": 8.703,
+                "Wrst": 15.064,
+                "StDev": 2.516
+            },
+            {
+                "count": 10,
+                "host": "lga25s71-in-f14.1e100.net",
+                "Loss%": 0.0,
+                "Snt": 2,
+                "Last": 8.304,
+                "Avg": 9.342,
+                "Best": 8.304,
+                "Wrst": 10.38,
+                "StDev": 1.467
+            }
+        ]
+    }
+}
