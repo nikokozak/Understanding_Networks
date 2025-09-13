@@ -83,8 +83,13 @@ defmodule RAND do
     packet = Packet.make_packet(from, to, message, ack_to: self())
 
     # Pick a random outgoing interface from the source
-    {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-    out_iface = Enum.random(source_ifaces)
+    state = :sys.get_state(from)
+    {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+    out_iface =
+      case RAND.Node.fastest_route(state, to) do
+        {{_node, link_id}, _hops} -> link_id
+        nil -> Enum.random(source_ifaces)
+      end
     spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
 
     receive do
@@ -104,8 +109,13 @@ defmodule RAND do
     payload = wrap_payload(message, verbose, ack_route)
     packet = Packet.make_packet(from, to, payload, ack_to: self())
 
-    {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-    out_iface = Enum.random(source_ifaces)
+    state = :sys.get_state(from)
+    {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+    out_iface =
+      case RAND.Node.fastest_route(state, to) do
+        {{_node, link_id}, _hops} -> link_id
+        nil -> Enum.random(source_ifaces)
+      end
     spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
 
     receive do
@@ -134,8 +144,13 @@ defmodule RAND do
       _ ->
         from = Enum.at(nodes, from_idx)
         packet = Packet.make_packet(from, to_pid, message, ack_to: self())
-        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-        out_iface = Enum.random(source_ifaces)
+        state = :sys.get_state(from)
+        {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+        out_iface =
+          case RAND.Node.fastest_route(state, to_pid) do
+            {{_node, link_id}, _hops} -> link_id
+            nil -> Enum.random(source_ifaces)
+          end
         spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
 
         receive do
@@ -163,8 +178,13 @@ defmodule RAND do
         ack_route = Keyword.get(opts, :ack_route, false)
         payload = wrap_payload(message, verbose, ack_route)
         packet = Packet.make_packet(from, to_pid, payload, ack_to: self())
-        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-        out_iface = Enum.random(source_ifaces)
+        state = :sys.get_state(from)
+        {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+        out_iface =
+          case RAND.Node.fastest_route(state, to_pid) do
+            {{_node, link_id}, _hops} -> link_id
+            nil -> Enum.random(source_ifaces)
+          end
         spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
 
         receive do
@@ -183,8 +203,13 @@ defmodule RAND do
       {_, nil} -> {:error, {:unknown_to, to_address}}
       {from, to} ->
         packet = Packet.make_packet(from, to, message, ack_to: self())
-        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-        out_iface = Enum.random(source_ifaces)
+        state = :sys.get_state(from)
+        {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+        out_iface =
+          case RAND.Node.fastest_route(state, to) do
+            {{_node, link_id}, _hops} -> link_id
+            nil -> Enum.random(source_ifaces)
+          end
         spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
         receive do
           {:delivered, ^to, hops, _parsed} -> {:ok, hops}
@@ -206,8 +231,13 @@ defmodule RAND do
         ack_route = Keyword.get(opts, :ack_route, false)
         payload = wrap_payload(message, verbose, ack_route)
         packet = Packet.make_packet(from, to, payload, ack_to: self())
-        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-        out_iface = Enum.random(source_ifaces)
+        state = :sys.get_state(from)
+        {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+        out_iface =
+          case RAND.Node.fastest_route(state, to) do
+            {{_node, link_id}, _hops} -> link_id
+            nil -> Enum.random(source_ifaces)
+          end
         spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
         receive do
           {:delivered, ^to, hops, parsed} ->
@@ -232,8 +262,13 @@ defmodule RAND do
       {from, to} ->
         trace = {:trace, [], payload}
         packet = Packet.make_packet(from, to, trace, ack_to: self())
-        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
-        out_iface = Enum.random(source_ifaces)
+        state = :sys.get_state(from)
+        {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
+        out_iface =
+          case RAND.Node.fastest_route(state, to) do
+            {{_node, link_id}, _hops} -> link_id
+            nil -> Enum.random(source_ifaces)
+          end
         spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
         receive do
           {:delivered, ^to, hops, parsed} ->

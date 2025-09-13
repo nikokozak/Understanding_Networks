@@ -76,17 +76,14 @@ defmodule RAND.Node do
 
       {:reply, :ok, state}
     else
-      # Forward the packet to the fastest known route to the destination node
-      # Otherwise send it out of a random link
-      case fastest_route(state, to_node_pid) do
+      # Forward the packet to the best known route to the destination node,
+      # excluding the incoming interface to avoid immediate backtracking.
+      case best_route_excluding(state, to_node_pid, from_local_interface_pid) do
         {{_node, link_id}, _hops} ->
-          if link_id != from_local_interface_pid do
-            forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
-          end
-
+          forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
         nil ->
-          # No known route to the destination node
-          # Send it out of a random link
+          # No known alternative route to the destination node
+          # Send it out of a random other link (still excluding incoming)
           Enum.random(
             state.interface_pids
             |> Enum.filter(fn ipid -> ipid != from_local_interface_pid end)
@@ -117,17 +114,14 @@ defmodule RAND.Node do
 
       {:noreply, state}
     else
-      # Forward the packet to the fastest known route to the destination node
-      # Otherwise send it out of a random link
-      case fastest_route(state, to_node_pid) do
+      # Forward the packet to the best known route to the destination node,
+      # excluding the incoming interface to avoid immediate backtracking.
+      case best_route_excluding(state, to_node_pid, incoming_interface_pid) do
         {{_node, link_id}, _hops} ->
-          if link_id != incoming_interface_pid do
-            forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
-          end
-
+          forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
         nil ->
-          # No known route to the destination node
-          # Send it out of a random link
+          # No known alternative route to the destination node
+          # Send it out of a random other link (still excluding incoming)
           Enum.random(
             state.interface_pids
             |> Enum.filter(fn ipid -> ipid != incoming_interface_pid end)
@@ -222,6 +216,13 @@ defmodule RAND.Node do
   def fastest_route(state, to_node) do
     state.node_map
     |> Enum.filter(fn {{node, _link}, _hops} -> node == to_node end)
+    |> Enum.min_by(fn {_key, hops} -> hops end, fn -> nil end)
+  end
+
+  # Like fastest_route/2, but exclude a specific link (e.g., the incoming interface)
+  def best_route_excluding(state, to_node, exclude_link) do
+    state.node_map
+    |> Enum.filter(fn {{node, link}, _hops} -> node == to_node and link != exclude_link end)
     |> Enum.min_by(fn {_key, hops} -> hops end, fn -> nil end)
   end
 end
