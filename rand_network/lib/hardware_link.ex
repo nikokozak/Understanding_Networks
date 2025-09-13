@@ -8,10 +8,10 @@ defmodule HardwareLink do
   # The initial value should be a map with keys :owner and :paired_link
   # :owner is the pid of the Node that owns this HardwareLink
   # :paired_link is the pid of the HardwareLink that this HardwareLink is connected to
-  def start_link(%{:owner => _owner, :paired_link => _link} = state) do
+  def start_link(%{:owner => _owner, :peer_interface => _link} = state) do
     # Initial values are empty; they will be allocated in a round-robin and
-    # then paired to a Node
-    Agent.start_link(fn -> state end, name: __MODULE__)
+    # then paired to a Node. Do NOT register a global name; we need many agents.
+    Agent.start_link(fn -> state end)
   end
 
   # Register a link, or hardware link, to another HardwareLink process
@@ -47,21 +47,21 @@ defmodule HardwareLink do
 
   @spec transmit_packet(pid(), Packet.t()) :: :ok
   def transmit_packet(local_interface_pid, packet) do
-    Agent.get(local_interface_pid, fn state ->
-      peer_interface_pid = Map.get(state, :peer_interface)
-
-      Agent.get(peer_interface_pid, fn peer_interface_state ->
-        peer = Map.get(peer_interface_state, :owner)
-        Node.push_packet(peer, packet)
-      end)
+    peer_interface_pid = Agent.get(local_interface_pid, fn state ->
+      Map.get(state, :peer_interface)
     end)
-  end
 
-  def value do
-    Agent.get(__MODULE__, & &1)
-  end
+    case peer_interface_pid do
+      nil -> :ok
+      _ ->
+        peer_owner = Agent.get(peer_interface_pid, fn peer_state ->
+          Map.get(peer_state, :owner)
+        end)
 
-  def increment do
-    Agent.update(__MODULE__, &(&1 + 1))
+        case peer_owner do
+          nil -> :ok
+          peer -> RAND.Node.deliver_packet(peer, packet, peer_interface_pid)
+        end
+    end
   end
 end

@@ -4,15 +4,156 @@ defmodule RAND do
   """
 
   @doc """
-  Hello world.
+  Spawn a random mesh network with the given number of nodes and interfaces per node.
 
-  ## Examples
-
-      iex> RAND.hello()
-      :world
-
+  Returns a list of node pids and a flat list of hardware link pids.
   """
-  def hello do
-    :world
+  def spawn_network(num_nodes, interfaces_per_node)
+      when num_nodes > 1 and interfaces_per_node > 0 do
+    # 1) Create all hardware links (one per interface)
+    total_links = num_nodes * interfaces_per_node
+
+    link_pids =
+      for _ <- 1..total_links do
+        {:ok, pid} = HardwareLink.start_link(%{owner: nil, peer_interface: nil})
+        pid
+      end
+
+    # 2) Group interfaces per node
+    interface_groups = Enum.chunk_every(link_pids, interfaces_per_node)
+
+    # 3) Start nodes with their interface lists and register ownership
+    node_pids =
+      for iface_list <- interface_groups do
+        {:ok, node_pid} = RAND.Node.start_link(iface_list)
+        Enum.each(iface_list, fn iface -> HardwareLink.register_owner(iface, node_pid) end)
+        node_pid
+      end
+
+    # 4) Connect interfaces randomly, avoiding same-owner connections
+    # We'll create a pool of all interfaces and pair them up with constraints.
+    # Simple greedy pairing: repeatedly pick an interface and try to find a peer from a different owner.
+    :ok = randomly_pair_interfaces(interface_groups)
+
+    # 5) Assign simple word addresses and register them on nodes
+    addresses = generate_addresses(length(node_pids))
+
+    Enum.zip(node_pids, addresses)
+    |> Enum.each(fn {pid, addr} -> RAND.Node.register_address(pid, addr) end)
+
+    {node_pids, List.flatten(interface_groups)}
+  end
+
+  defp randomly_pair_interfaces(interface_groups) do
+    all = interface_groups |> List.flatten()
+    pair_all(all)
+  end
+
+  defp pair_all([]), do: :ok
+
+  defp pair_all([_single]) do
+    # Odd count safeguard; shouldn't happen with even degree across nodes
+    :ok
+  end
+
+  defp pair_all([iface | rest]) do
+    owner = HardwareLink.get_owner(iface)
+    candidates = Enum.filter(rest, fn r -> HardwareLink.get_owner(r) != owner end)
+
+    case candidates do
+      [] ->
+        # Fallback: swap with some already paired? For simplicity, just skip this iface.
+        pair_all(rest)
+
+      _ ->
+        peer = Enum.random(candidates)
+        HardwareLink.register_link(iface, peer)
+        HardwareLink.register_link(peer, iface)
+        pair_all(List.delete(rest, peer))
+    end
+  end
+
+  @doc """
+  Send a message from a source node to a destination node and wait for delivery.
+  Returns {:ok, hops} or :timeout.
+  """
+  def traceroute(nodes, from_idx, to_idx, message, timeout \\ 2_000) do
+    from = Enum.at(nodes, from_idx)
+    to = Enum.at(nodes, to_idx)
+    packet = Packet.make_packet(from, to, message, ack_to: self())
+
+    # Pick a random outgoing interface from the source
+    {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+    out_iface = Enum.random(source_ifaces)
+    spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+
+    receive do
+      {:delivered, ^to, hops, _parsed} -> {:ok, hops}
+    after
+      timeout -> :timeout
+    end
+  end
+
+  def directory(nodes) do
+    Enum.with_index(nodes)
+    |> Enum.map(fn {pid, idx} -> {idx, RAND.Node.get_address(pid)} end)
+  end
+
+  def traceroute_by_address(nodes, from_idx, to_address, message, timeout \\ 2_000) do
+    to_pid =
+      nodes
+      |> Enum.find(fn pid -> RAND.Node.get_address(pid) == to_address end)
+
+    case to_pid do
+      nil ->
+        {:error, :unknown_address}
+
+      _ ->
+        from = Enum.at(nodes, from_idx)
+        packet = Packet.make_packet(from, to_pid, message, ack_to: self())
+        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+        out_iface = Enum.random(source_ifaces)
+        spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+
+        receive do
+          {:delivered, ^to_pid, hops, _parsed} -> {:ok, hops}
+        after
+          timeout -> :timeout
+        end
+    end
+  end
+
+  def traceroute_by_addresses(nodes, from_address, to_address, message, timeout \\ 2_000) do
+    case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
+      {nil, _} -> {:error, {:unknown_from, from_address}}
+      {_, nil} -> {:error, {:unknown_to, to_address}}
+      {from, to} ->
+        packet = Packet.make_packet(from, to, message, ack_to: self())
+        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+        out_iface = Enum.random(source_ifaces)
+        spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+        receive do
+          {:delivered, ^to, hops, _parsed} -> {:ok, hops}
+        after
+          timeout -> :timeout
+        end
+    end
+  end
+
+  defp resolve_by_address(nodes, address) do
+    Enum.find(nodes, fn pid -> RAND.Node.get_address(pid) == address end)
+  end
+
+  defp generate_addresses(n) do
+    # Very simple word-ish addresses (no external deps): adjective-noun-xxxx
+    adjectives = ~w(bright dark quiet loud fast slow red blue green amber silver golden)
+    nouns = ~w(fox wolf kite node link mesh stream field river cloud stone)
+
+    for _ <- 1..n do
+      a = Enum.random(adjectives)
+      b = Enum.random(nouns)
+      suffix = Integer.to_string(:rand.uniform(9000) + 1000)
+      Enum.join([a, b, suffix], "-")
+    end
   end
 end
