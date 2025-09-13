@@ -72,6 +72,8 @@ defmodule RAND.Node do
         send(ack_to, {:delivered, self(), hops, parsed_for_ack})
       end
 
+      maybe_route_ack(parsed_for_ack, state)
+
       {:reply, :ok, state}
     else
       # Forward the packet to the fastest known route to the destination node
@@ -110,6 +112,9 @@ defmodule RAND.Node do
       if ack_to do
         send(ack_to, {:delivered, self(), hops, parsed_for_ack})
       end
+
+      maybe_route_ack(parsed_for_ack, state)
+
       {:noreply, state}
     else
       # Forward the packet to the fastest known route to the destination node
@@ -159,6 +164,16 @@ defmodule RAND.Node do
         packet
     end
   end
+
+  # Optionally route an ACK packet back through the mesh to the source so nodes learn distances to us
+  defp maybe_route_ack(%{from_node: src, message: {:ack_request, _}}, state) when is_pid(src) do
+    ack = Packet.make_packet(self(), src, {:route_ack, state.address}, ack_to: nil)
+    case fastest_route(state, src) do
+      {{_node, link_id}, _hops} -> forward_packet(link_id, Packet.update_hops(ack))
+      nil -> Enum.random(state.interface_pids) |> forward_packet(Packet.update_hops(ack))
+    end
+  end
+  defp maybe_route_ack(_parsed, _state), do: :ok
 
   # Address helpers
   def register_address(node_pid, address) do

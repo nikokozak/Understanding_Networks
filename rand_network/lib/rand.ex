@@ -94,6 +94,29 @@ defmodule RAND do
     end
   end
 
+  # Verbose/tag-enabled overload
+  def traceroute(nodes, from_idx, to_idx, message, timeout, opts) when is_list(opts) do
+    from = Enum.at(nodes, from_idx)
+    to = Enum.at(nodes, to_idx)
+    verbose = Keyword.get(opts, :verbose, false)
+    tag = Keyword.get(opts, :tag)
+    ack_route = Keyword.get(opts, :ack_route, false)
+    payload = wrap_payload(message, verbose, ack_route)
+    packet = Packet.make_packet(from, to, payload, ack_to: self())
+
+    {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+    out_iface = Enum.random(source_ifaces)
+    spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+
+    receive do
+      {:delivered, ^to, hops, parsed} ->
+        maybe_print_trace(nodes, from, to, parsed, hops, verbose, tag)
+        {:ok, hops}
+    after
+      timeout -> :timeout
+    end
+  end
+
   def directory(nodes) do
     Enum.with_index(nodes)
     |> Enum.map(fn {pid, idx} -> {idx, RAND.Node.get_address(pid)} end)
@@ -123,6 +146,37 @@ defmodule RAND do
     end
   end
 
+  # Verbose/tag-enabled overload
+  def traceroute_by_address(nodes, from_idx, to_address, message, timeout, opts) when is_list(opts) do
+    to_pid =
+      nodes
+      |> Enum.find(fn pid -> RAND.Node.get_address(pid) == to_address end)
+
+    case to_pid do
+      nil ->
+        {:error, :unknown_address}
+
+      _ ->
+        from = Enum.at(nodes, from_idx)
+        verbose = Keyword.get(opts, :verbose, false)
+        tag = Keyword.get(opts, :tag)
+        ack_route = Keyword.get(opts, :ack_route, false)
+        payload = wrap_payload(message, verbose, ack_route)
+        packet = Packet.make_packet(from, to_pid, payload, ack_to: self())
+        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+        out_iface = Enum.random(source_ifaces)
+        spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+
+        receive do
+          {:delivered, ^to_pid, hops, parsed} ->
+            maybe_print_trace(nodes, from, to_pid, parsed, hops, verbose, tag)
+            {:ok, hops}
+        after
+          timeout -> :timeout
+        end
+    end
+  end
+
   def traceroute_by_addresses(nodes, from_address, to_address, message, timeout \\ 2_000) do
     case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
       {nil, _} -> {:error, {:unknown_from, from_address}}
@@ -138,6 +192,36 @@ defmodule RAND do
           timeout -> :timeout
         end
     end
+  end
+
+  # Verbose/tag-enabled overload
+  def traceroute_by_addresses(nodes, from_address, to_address, message, timeout, opts)
+      when is_list(opts) do
+    case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
+      {nil, _} -> {:error, {:unknown_from, from_address}}
+      {_, nil} -> {:error, {:unknown_to, to_address}}
+      {from, to} ->
+        verbose = Keyword.get(opts, :verbose, false)
+        tag = Keyword.get(opts, :tag)
+        ack_route = Keyword.get(opts, :ack_route, false)
+        payload = wrap_payload(message, verbose, ack_route)
+        packet = Packet.make_packet(from, to, payload, ack_to: self())
+        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+        out_iface = Enum.random(source_ifaces)
+        spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+        receive do
+          {:delivered, ^to, hops, parsed} ->
+            maybe_print_trace(nodes, from, to, parsed, hops, verbose, tag)
+            {:ok, hops}
+        after
+          timeout -> :timeout
+        end
+    end
+  end
+
+  # Explicit alias with indices
+  def traceroute_by_indices(nodes, from_idx, to_idx, message, timeout, opts \\ []) do
+    traceroute(nodes, from_idx, to_idx, message, timeout, opts)
   end
 
   # Verbose traceroute that returns hop-by-hop path and prints classic lines
@@ -171,6 +255,26 @@ defmodule RAND do
     path
     |> Enum.with_index(1)
     |> Enum.each(fn {addr, i} -> IO.puts(" #{i}\t#{addr}") end)
+  end
+
+  defp maybe_print_trace(_nodes, from_pid, to_pid, parsed, hops, verbose, tag) do
+    if verbose do
+      from_addr = RAND.Node.get_address(from_pid)
+      to_addr = RAND.Node.get_address(to_pid)
+      case parsed do
+        %{message: {:trace, path, _payload}} ->
+          if tag do
+            IO.puts("[#{tag}]")
+          end
+          print_traceroute_lines(from_addr, to_addr, path, hops)
+        _ -> :ok
+      end
+    end
+  end
+
+  defp wrap_payload(message, verbose, ack_route) do
+    payload = if ack_route, do: {:ack_request, message}, else: message
+    if verbose, do: {:trace, [], payload}, else: payload
   end
 
   defp resolve_by_address(nodes, address) do
