@@ -77,10 +77,16 @@ defmodule RAND do
   Send a message from a source node to a destination node and wait for delivery.
   Returns {:ok, hops} or :timeout.
   """
-  def traceroute(nodes, from_idx, to_idx, message, timeout \\ 2_000) do
+  def traceroute(nodes, from_idx, to_idx, message) do
+    traceroute(nodes, from_idx, to_idx, message, timeout: 1_000)
+  end
+
+  def traceroute(nodes, from_idx, to_idx, message, opts) when is_list(opts) do
     from = Enum.at(nodes, from_idx)
     to = Enum.at(nodes, to_idx)
-    packet = Packet.make_packet(from, to, message, ack_to: self())
+    timeout = Keyword.get(opts, :timeout, 1_000)
+    ttl = Keyword.get(opts, :ttl)
+    packet = Packet.make_packet(from, to, message, ack_to: self(), ttl: ttl || 64)
 
     # Pick a random outgoing interface from the source
     state = :sys.get_state(from)
@@ -100,14 +106,17 @@ defmodule RAND do
   end
 
   # Verbose/tag-enabled overload
-  def traceroute(nodes, from_idx, to_idx, message, timeout, opts) when is_list(opts) do
+  def traceroute(nodes, from_idx, to_idx, message, opts) when is_list(opts) do
     from = Enum.at(nodes, from_idx)
     to = Enum.at(nodes, to_idx)
     verbose = Keyword.get(opts, :verbose, false)
     tag = Keyword.get(opts, :tag)
     ack_route = Keyword.get(opts, :ack_route, false)
+    timeout = Keyword.get(opts, :timeout, 1_000)
+    ttl = Keyword.get(opts, :ttl)
     payload = wrap_payload(message, verbose, ack_route)
-    packet = Packet.make_packet(from, to, payload, ack_to: self())
+    maybe_set_busy_prob(nodes, opts)
+    packet = Packet.make_packet(from, to, payload, ack_to: self(), ttl: ttl || 64)
 
     state = :sys.get_state(from)
     {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
@@ -132,7 +141,8 @@ defmodule RAND do
     |> Enum.map(fn {pid, idx} -> {idx, RAND.Node.get_address(pid)} end)
   end
 
-  def traceroute_by_address(nodes, from_idx, to_address, message, timeout \\ 2_000) do
+  def traceroute_by_address(nodes, from_idx, to_address, message, opts \\ [timeout: 1_000])
+  def traceroute_by_address(nodes, from_idx, to_address, message, opts) when is_list(opts) do
     to_pid =
       nodes
       |> Enum.find(fn pid -> RAND.Node.get_address(pid) == to_address end)
@@ -143,7 +153,9 @@ defmodule RAND do
 
       _ ->
         from = Enum.at(nodes, from_idx)
-        packet = Packet.make_packet(from, to_pid, message, ack_to: self())
+        timeout = Keyword.get(opts, :timeout, 1_000)
+        ttl = Keyword.get(opts, :ttl)
+        packet = Packet.make_packet(from, to_pid, message, ack_to: self(), ttl: ttl || 64)
         state = :sys.get_state(from)
         {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
         out_iface =
@@ -162,7 +174,7 @@ defmodule RAND do
   end
 
   # Verbose/tag-enabled overload
-  def traceroute_by_address(nodes, from_idx, to_address, message, timeout, opts) when is_list(opts) do
+  def traceroute_by_address(nodes, from_idx, to_address, message, opts) when is_list(opts) do
     to_pid =
       nodes
       |> Enum.find(fn pid -> RAND.Node.get_address(pid) == to_address end)
@@ -176,8 +188,11 @@ defmodule RAND do
         verbose = Keyword.get(opts, :verbose, false)
         tag = Keyword.get(opts, :tag)
         ack_route = Keyword.get(opts, :ack_route, false)
+        timeout = Keyword.get(opts, :timeout, 1_000)
+        ttl = Keyword.get(opts, :ttl)
         payload = wrap_payload(message, verbose, ack_route)
-        packet = Packet.make_packet(from, to_pid, payload, ack_to: self())
+        maybe_set_busy_prob(nodes, opts)
+        packet = Packet.make_packet(from, to_pid, payload, ack_to: self(), ttl: ttl || 64)
         state = :sys.get_state(from)
         {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
         out_iface =
@@ -197,12 +212,15 @@ defmodule RAND do
     end
   end
 
-  def traceroute_by_addresses(nodes, from_address, to_address, message, timeout \\ 2_000) do
+  def traceroute_by_addresses(nodes, from_address, to_address, message, opts \\ [timeout: 1_000])
+  def traceroute_by_addresses(nodes, from_address, to_address, message, opts) when is_list(opts) do
     case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
       {nil, _} -> {:error, {:unknown_from, from_address}}
       {_, nil} -> {:error, {:unknown_to, to_address}}
       {from, to} ->
-        packet = Packet.make_packet(from, to, message, ack_to: self())
+        timeout = Keyword.get(opts, :timeout, 1_000)
+        ttl = Keyword.get(opts, :ttl)
+        packet = Packet.make_packet(from, to, message, ack_to: self(), ttl: ttl || 64)
         state = :sys.get_state(from)
         {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
         out_iface =
@@ -220,7 +238,7 @@ defmodule RAND do
   end
 
   # Verbose/tag-enabled overload
-  def traceroute_by_addresses(nodes, from_address, to_address, message, timeout, opts)
+  def traceroute_by_addresses(nodes, from_address, to_address, message, opts)
       when is_list(opts) do
     case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
       {nil, _} -> {:error, {:unknown_from, from_address}}
@@ -229,8 +247,11 @@ defmodule RAND do
         verbose = Keyword.get(opts, :verbose, false)
         tag = Keyword.get(opts, :tag)
         ack_route = Keyword.get(opts, :ack_route, false)
+        timeout = Keyword.get(opts, :timeout, 1_000)
+        ttl = Keyword.get(opts, :ttl)
         payload = wrap_payload(message, verbose, ack_route)
-        packet = Packet.make_packet(from, to, payload, ack_to: self())
+        maybe_set_busy_prob(nodes, opts)
+        packet = Packet.make_packet(from, to, payload, ack_to: self(), ttl: ttl || 64)
         state = :sys.get_state(from)
         {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
         out_iface =
@@ -250,8 +271,8 @@ defmodule RAND do
   end
 
   # Explicit alias with indices
-  def traceroute_by_indices(nodes, from_idx, to_idx, message, timeout, opts \\ []) do
-    traceroute(nodes, from_idx, to_idx, message, timeout, opts)
+  def traceroute_by_indices(nodes, from_idx, to_idx, message, opts \\ []) do
+    traceroute(nodes, from_idx, to_idx, message, opts)
   end
 
   # Verbose traceroute that returns hop-by-hop path and prints classic lines
@@ -310,6 +331,22 @@ defmodule RAND do
   defp wrap_payload(message, verbose, ack_route) do
     payload = if ack_route, do: {:ack_request, message}, else: message
     if verbose, do: {:trace, [], payload}, else: payload
+  end
+
+  # TTL now set at packet creation
+
+  defp maybe_set_busy_prob(nodes, opts) do
+    case Keyword.get(opts, :busy_prob) do
+      nil -> :ok
+      prob ->
+        Enum.each(nodes, fn node ->
+          case :sys.get_state(node) do
+            %{interface_pids: ifaces} -> Enum.each(ifaces, &HardwareLink.set_busy_prob(&1, prob))
+            _ -> :ok
+          end
+        end)
+        :ok
+    end
   end
 
   defp resolve_by_address(nodes, address) do

@@ -5,8 +5,9 @@ defmodule Packet do
   # In the future we could maybe add fragmentation to immitate packet loss, etc.
   def make_packet(from_node_pid, to_node_pid, message, opts \\ []) do
     # To safely encode PIDs and terms, we use term_to_binary. Layout:
-    # <<from::binary, to::binary, hops::16, ack_to::binary, payload::binary>> with lengths prefixed
+    # <<from::bin, to::bin, hops::16, ttl::16, ack_to::bin, payload::bin>> with lengths prefixed
     hops = 0
+    ttl = Keyword.get(opts, :ttl, 64)
     ack_to = Keyword.get(opts, :ack_to, nil)
 
     from_bin = :erlang.term_to_binary(from_node_pid)
@@ -15,8 +16,10 @@ defmodule Packet do
     payload = :erlang.term_to_binary(message)
 
     bits =
-      <<byte_size(from_bin)::16, from_bin::binary, byte_size(to_bin)::16, to_bin::binary,
-        hops::16, byte_size(ack_bin)::16, ack_bin::binary, byte_size(payload)::16,
+      <<byte_size(from_bin)::16, from_bin::binary,
+        byte_size(to_bin)::16, to_bin::binary,
+        hops::16, ttl::16,
+        byte_size(ack_bin)::16, ack_bin::binary, byte_size(payload)::16,
         payload::binary>>
 
     %Packet{bits: bits}
@@ -29,7 +32,7 @@ defmodule Packet do
     <<from_bin::binary-size(from_len), rest::binary>> = rest
     <<to_len::16, rest::binary>> = rest
     <<to_bin::binary-size(to_len), rest::binary>> = rest
-    <<hops::16, rest::binary>> = rest
+    <<hops::16, ttl::16, rest::binary>> = rest
     <<ack_len::16, rest::binary>> = rest
     <<ack_bin::binary-size(ack_len), rest::binary>> = rest
     <<payload_len::16, payload::binary-size(payload_len)>> = rest
@@ -38,6 +41,7 @@ defmodule Packet do
       from_node: :erlang.binary_to_term(from_bin),
       to_node: :erlang.binary_to_term(to_bin),
       hops: hops,
+      ttl: ttl,
       ack_to: :erlang.binary_to_term(ack_bin),
       message: :erlang.binary_to_term(payload)
     }
@@ -49,7 +53,7 @@ defmodule Packet do
     <<from_bin::binary-size(from_len), rest::binary>> = rest
     <<to_len::16, rest::binary>> = rest
     <<to_bin::binary-size(to_len), rest::binary>> = rest
-    <<hops::16, rest::binary>> = rest
+    <<hops::16, ttl::16, rest::binary>> = rest
     <<ack_len::16, rest::binary>> = rest
     <<ack_bin::binary-size(ack_len), rest::binary>> = rest
     <<payload_len::16, payload::binary-size(payload_len)>> = rest
@@ -57,8 +61,11 @@ defmodule Packet do
     new_hops = hops + 1
 
     new_bits =
-      <<from_len::16, from_bin::binary, to_len::16, to_bin::binary, new_hops::16, ack_len::16,
-        ack_bin::binary, payload_len::16, payload::binary>>
+      <<from_len::16, from_bin::binary,
+        to_len::16, to_bin::binary,
+        new_hops::16, ttl::16,
+        ack_len::16, ack_bin::binary,
+        payload_len::16, payload::binary>>
 
     %Packet{packet | bits: new_bits}
   end
@@ -69,7 +76,7 @@ defmodule Packet do
     <<from_bin::binary-size(from_len), rest::binary>> = rest
     <<to_len::16, rest::binary>> = rest
     <<to_bin::binary-size(to_len), rest::binary>> = rest
-    <<hops::16, rest::binary>> = rest
+    <<hops::16, ttl::16, rest::binary>> = rest
     <<ack_len::16, rest::binary>> = rest
     <<ack_bin::binary-size(ack_len), _old_payload::binary>> = rest
 
@@ -79,7 +86,7 @@ defmodule Packet do
     new_bits =
       <<from_len::16, from_bin::binary,
         to_len::16, to_bin::binary,
-        hops::16,
+        hops::16, ttl::16,
         ack_len::16, ack_bin::binary,
         payload_len::16, payload::binary>>
 

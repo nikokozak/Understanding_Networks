@@ -7,10 +7,10 @@ defmodule HardwareLink do
 
   # The initial value should be a map with keys :owner and :paired_link
   # :owner is the pid of the Node that owns this HardwareLink
-  # :paired_link is the pid of the HardwareLink that this HardwareLink is connected to
+  # :peer_interface is the pid of the HardwareLink that this HardwareLink is connected to
   def start_link(%{:owner => _owner, :peer_interface => _link} = state) do
     # Initial values are empty; they will be allocated in a round-robin and
-    # then paired to a Node. Do NOT register a global name; we need many agents.
+    # then paired to a Node.
     Agent.start_link(fn -> state end)
   end
 
@@ -60,8 +60,45 @@ defmodule HardwareLink do
 
         case peer_owner do
           nil -> :ok
-          peer -> RAND.Node.deliver_packet(peer, packet, peer_interface_pid)
+          peer -> RAND.Node.push_packet(peer, packet)
         end
     end
+  end
+
+  @doc """
+  Attempt to transmit; returns :ok | :busy | :no_peer.
+  Busy is simulated via a per-interface random probability.
+  """
+  @spec try_transmit(pid(), Packet.t()) :: :ok | :busy | :no_peer
+  def try_transmit(local_interface_pid, packet) do
+    peer_interface_pid = Agent.get(local_interface_pid, fn state ->
+      Map.get(state, :peer_interface)
+    end)
+
+    if is_nil(peer_interface_pid) do
+      :no_peer
+    else
+      busy_prob = Agent.get(local_interface_pid, fn state -> Map.get(state, :busy_prob, 0.0) end)
+      if :rand.uniform() < busy_prob do
+        :busy
+      else
+        peer_owner = Agent.get(peer_interface_pid, fn peer_state -> Map.get(peer_state, :owner) end)
+        if is_nil(peer_owner) do
+          :no_peer
+        else
+          RAND.Node.push_packet(peer_owner, packet)
+          :ok
+        end
+      end
+    end
+  end
+
+  def set_busy_prob(local_interface_pid, prob) when is_number(prob) do
+    p =
+      prob
+      |> max(0.0)
+      |> min(1.0)
+
+    Agent.update(local_interface_pid, fn state -> Map.put(state, :busy_prob, p) end)
   end
 end
