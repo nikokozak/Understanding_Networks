@@ -59,17 +59,17 @@ defmodule RAND.Node do
       message: _message,
       ack_to: ack_to
     } =
-      parsed_message = parse_packet(packet)
+      parse_packet(packet)
 
     state = update_node_map(state, from_node_pid, from_local_interface_pid, hops + 1)
 
     if is_this_node?(to_node_pid) do
-      IO.puts("Message reached destination: #{inspect(parsed_message)}")
+      annotated = annotate_trace(packet, state)
+      parsed_for_ack = parse_packet(annotated)
+      IO.puts("Message reached destination: #{inspect(parsed_for_ack)}")
 
       if ack_to do
-        # Send an acknowledgment directly back to the sender (we don't bother routing it, just a notification)
-        # TODO: Are we actually parsing this?
-        send(ack_to, {:delivered, self(), hops, parsed_message})
+        send(ack_to, {:delivered, self(), hops, parsed_for_ack})
       end
 
       {:reply, :ok, state}
@@ -79,7 +79,7 @@ defmodule RAND.Node do
       case fastest_route(state, to_node_pid) do
         {{_node, link_id}, _hops} ->
           if link_id != from_local_interface_pid do
-            forward_packet(link_id, Packet.update_hops(packet))
+            forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
           end
 
         nil ->
@@ -89,7 +89,7 @@ defmodule RAND.Node do
             state.interface_pids
             |> Enum.filter(fn ipid -> ipid != from_local_interface_pid end)
           )
-          |> forward_packet(Packet.update_hops(packet))
+          |> forward_packet(Packet.update_hops(annotate_trace(packet, state)))
       end
 
       {:reply, :ok, state}
@@ -99,14 +99,16 @@ defmodule RAND.Node do
   @impl true
   def handle_cast({:incoming_packet, packet, incoming_interface_pid}, state) do
     %{from_node: from_node_pid, to_node: to_node_pid, hops: hops, message: _message, ack_to: ack_to} =
-      parsed_message = parse_packet(packet)
+      parse_packet(packet)
 
     state = update_node_map(state, from_node_pid, incoming_interface_pid, hops + 1)
 
     if is_this_node?(to_node_pid) do
-      IO.puts("Message reached destination: #{inspect(parsed_message)}")
+      annotated = annotate_trace(packet, state)
+      parsed_for_ack = parse_packet(annotated)
+      IO.puts("Message reached destination: #{inspect(parsed_for_ack)}")
       if ack_to do
-        send(ack_to, {:delivered, self(), hops, parsed_message})
+        send(ack_to, {:delivered, self(), hops, parsed_for_ack})
       end
       {:noreply, state}
     else
@@ -115,7 +117,7 @@ defmodule RAND.Node do
       case fastest_route(state, to_node_pid) do
         {{_node, link_id}, _hops} ->
           if link_id != incoming_interface_pid do
-            forward_packet(link_id, Packet.update_hops(packet))
+            forward_packet(link_id, Packet.update_hops(annotate_trace(packet, state)))
           end
 
         nil ->
@@ -125,7 +127,7 @@ defmodule RAND.Node do
             state.interface_pids
             |> Enum.filter(fn ipid -> ipid != incoming_interface_pid end)
           )
-          |> forward_packet(Packet.update_hops(packet))
+          |> forward_packet(Packet.update_hops(annotate_trace(packet, state)))
       end
 
       {:noreply, state}
@@ -145,6 +147,19 @@ defmodule RAND.Node do
     Packet.parse_packet(packet)
   end
 
+  # If the message is a trace tuple, append this node's address and return updated packet
+  defp annotate_trace(packet, %{address: nil}), do: packet
+  defp annotate_trace(packet, %{address: address}) do
+    case Packet.parse_packet(packet) do
+      %{message: {:trace, path, payload}} when is_list(path) ->
+        Packet.update_message(packet, {:trace, path ++ [address], payload})
+      %{message: {:trace, path}} when is_list(path) ->
+        Packet.update_message(packet, {:trace, path ++ [address]})
+      _ ->
+        packet
+    end
+  end
+
   # Address helpers
   def register_address(node_pid, address) do
     GenServer.call(node_pid, {:register_address, address})
@@ -154,11 +169,11 @@ defmodule RAND.Node do
     GenServer.call(node_pid, :get_address)
   end
 
+  # Address calls
   @impl true
   def handle_call({:register_address, address}, _from, state) do
     {:reply, :ok, %{state | address: address}}
   end
-
   @impl true
   def handle_call(:get_address, _from, state) do
     {:reply, state.address, state}

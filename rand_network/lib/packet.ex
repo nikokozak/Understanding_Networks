@@ -1,6 +1,5 @@
 defmodule Packet do
   defstruct [:bits]
-  @enforce_keys [:bits]
 
   # Of course, a real packet would have checksums, error correction, etc.
   # In the future we could maybe add fragmentation to immitate packet loss, etc.
@@ -60,6 +59,29 @@ defmodule Packet do
     new_bits =
       <<from_len::16, from_bin::binary, to_len::16, to_bin::binary, new_hops::16, ack_len::16,
         ack_bin::binary, payload_len::16, payload::binary>>
+
+    %Packet{packet | bits: new_bits}
+  end
+
+  # Replace the payload/message term while preserving other header fields
+  def update_message(%Packet{bits: bits} = packet, new_message) do
+    <<from_len::16, rest::binary>> = bits
+    <<from_bin::binary-size(from_len), rest::binary>> = rest
+    <<to_len::16, rest::binary>> = rest
+    <<to_bin::binary-size(to_len), rest::binary>> = rest
+    <<hops::16, rest::binary>> = rest
+    <<ack_len::16, rest::binary>> = rest
+    <<ack_bin::binary-size(ack_len), _old_payload::binary>> = rest
+
+    payload = :erlang.term_to_binary(new_message)
+    payload_len = byte_size(payload)
+
+    new_bits =
+      <<from_len::16, from_bin::binary,
+        to_len::16, to_bin::binary,
+        hops::16,
+        ack_len::16, ack_bin::binary,
+        payload_len::16, payload::binary>>
 
     %Packet{packet | bits: new_bits}
   end

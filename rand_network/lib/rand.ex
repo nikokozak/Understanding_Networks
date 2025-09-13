@@ -140,6 +140,39 @@ defmodule RAND do
     end
   end
 
+  # Verbose traceroute that returns hop-by-hop path and prints classic lines
+  def traceroute_detail_by_addresses(nodes, from_address, to_address, payload, timeout \\ 2_000) do
+    case {resolve_by_address(nodes, from_address), resolve_by_address(nodes, to_address)} do
+      {nil, _} -> {:error, {:unknown_from, from_address}}
+      {_, nil} -> {:error, {:unknown_to, to_address}}
+      {from, to} ->
+        trace = {:trace, [], payload}
+        packet = Packet.make_packet(from, to, trace, ack_to: self())
+        {:ok, source_ifaces} = :sys.get_state(from) |> Map.fetch(:interface_pids)
+        out_iface = Enum.random(source_ifaces)
+        spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
+        receive do
+          {:delivered, ^to, hops, parsed} ->
+            case parsed do
+              %{message: {:trace, path, pay}} ->
+                print_traceroute_lines(from_address, to_address, path, hops)
+                {:ok, hops, path, pay}
+              %{message: other} ->
+                {:ok, hops, [], other}
+            end
+        after
+          timeout -> :timeout
+        end
+    end
+  end
+
+  defp print_traceroute_lines(from_addr, to_addr, path, hops) do
+    IO.puts("traceroute to #{to_addr} from #{from_addr}, #{hops} hops max")
+    path
+    |> Enum.with_index(1)
+    |> Enum.each(fn {addr, i} -> IO.puts(" #{i}\t#{addr}") end)
+  end
+
   defp resolve_by_address(nodes, address) do
     Enum.find(nodes, fn pid -> RAND.Node.get_address(pid) == address end)
   end
