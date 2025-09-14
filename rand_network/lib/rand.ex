@@ -81,30 +81,6 @@ defmodule RAND do
     traceroute(nodes, from_idx, to_idx, message, timeout: 1_000)
   end
 
-  def traceroute(nodes, from_idx, to_idx, message, opts) when is_list(opts) do
-    from = Enum.at(nodes, from_idx)
-    to = Enum.at(nodes, to_idx)
-    timeout = Keyword.get(opts, :timeout, 1_000)
-    ttl = Keyword.get(opts, :ttl)
-    packet = Packet.make_packet(from, to, message, ack_to: self(), ttl: ttl || 64)
-
-    # Pick a random outgoing interface from the source
-    state = :sys.get_state(from)
-    {:ok, source_ifaces} = state |> Map.fetch(:interface_pids)
-    out_iface =
-      case RAND.Node.fastest_route(state, to) do
-        {{_node, link_id}, _hops} -> link_id
-        nil -> Enum.random(source_ifaces)
-      end
-    spawn(fn -> HardwareLink.transmit_packet(out_iface, packet) end)
-
-    receive do
-      {:delivered, ^to, hops, _parsed} -> {:ok, hops}
-    after
-      timeout -> :timeout
-    end
-  end
-
   # Verbose/tag-enabled overload
   def traceroute(nodes, from_idx, to_idx, message, opts) when is_list(opts) do
     from = Enum.at(nodes, from_idx)

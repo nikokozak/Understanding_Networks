@@ -47,21 +47,24 @@ defmodule HardwareLink do
 
   @spec transmit_packet(pid(), Packet.t()) :: :ok
   def transmit_packet(local_interface_pid, packet) do
-    peer_interface_pid = Agent.get(local_interface_pid, fn state ->
-      Map.get(state, :peer_interface)
-    end)
+    peer_interface_pid =
+      Agent.get(local_interface_pid, fn state ->
+        Map.get(state, :peer_interface)
+      end)
 
     case peer_interface_pid do
-      nil -> :ok
+      nil ->
+        :ok
+
       _ ->
-        peer_owner = Agent.get(peer_interface_pid, fn peer_state ->
-          Map.get(peer_state, :owner)
+        Agent.get(peer_interface_pid, fn peer_state ->
+          case Map.get(peer_state, :owner) do
+            nil -> :ok
+            peer -> RAND.Node.deliver_packet(peer, packet, peer_interface_pid)
+          end
         end)
 
-        case peer_owner do
-          nil -> :ok
-          peer -> RAND.Node.push_packet(peer, packet)
-        end
+        :ok
     end
   end
 
@@ -71,24 +74,37 @@ defmodule HardwareLink do
   """
   @spec try_transmit(pid(), Packet.t()) :: :ok | :busy | :no_peer
   def try_transmit(local_interface_pid, packet) do
-    peer_interface_pid = Agent.get(local_interface_pid, fn state ->
-      Map.get(state, :peer_interface)
-    end)
+    # Check if there is a peer interface (get its pid)
+    peer_interface_pid =
+      Agent.get(local_interface_pid, fn state ->
+        Map.get(state, :peer_interface)
+      end)
 
     if is_nil(peer_interface_pid) do
+      # No peer interface registered, bad luck
       :no_peer
     else
+      # Check if we are busy by simulating a random probability
       busy_prob = Agent.get(local_interface_pid, fn state -> Map.get(state, :busy_prob, 0.0) end)
+
       if :rand.uniform() < busy_prob do
+        # Oops, we are busy
         :busy
       else
-        peer_owner = Agent.get(peer_interface_pid, fn peer_state -> Map.get(peer_state, :owner) end)
-        if is_nil(peer_owner) do
-          :no_peer
-        else
-          RAND.Node.push_packet(peer_owner, packet)
-          :ok
-        end
+        # Not busy, try to send the packet to the peer's owner
+        # Importantly, this call is synchronous, so if the peer's owner is busy,
+        # this will block until it can be processed. TODO: figure out if async is possible by implementing a GenServer
+        # That said, it is OK with our model, in that the peer interface handles the actual passing and remote call.
+        Agent.get(peer_interface_pid, fn peer_state ->
+          case Map.get(peer_state, :owner) do
+            nil ->
+              :no_peer
+
+            peer ->
+              RAND.Node.deliver_packet(peer, packet, peer_interface_pid)
+              :ok
+          end
+        end)
       end
     end
   end

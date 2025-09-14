@@ -30,6 +30,11 @@ defmodule RAND.Node do
     GenServer.call(node_pid, {:incoming_packet, packet})
   end
 
+  # Async NIC → Node delivery with explicit incoming interface
+  def deliver_packet(node_pid, packet, incoming_interface_pid) do
+    GenServer.cast(node_pid, {:incoming_packet, packet, incoming_interface_pid})
+  end
+
   # Server (callbacks)
 
   @impl true
@@ -64,8 +69,7 @@ defmodule RAND.Node do
     if hops >= ttl do
       {:reply, :ok, state} # kill the packet
     else
-
-    if is_this_node?(to_node_pid) do
+      if is_this_node?(to_node_pid) do
       # The traceroute function will create a Packet that incorporates a trace
       # tuple as its message - {{:trace, list_of_addresses}, {:payload, payload}}.
       # As the packet passes through the nodes, we append an address to the trace list.
@@ -94,20 +98,49 @@ defmodule RAND.Node do
       try_forward_with_retry(state, to_node_pid, from_local_interface_pid, packet)
 
       {:reply, :ok, state}
+      end
     end
   end
-end
 
-  # Address calls (grouped with other handle_call clauses)
   @impl true
   def handle_call({:register_address, address}, _from, state) do
     {:reply, :ok, %{state | address: address}}
   end
+
   @impl true
   def handle_call(:get_address, _from, state) do
     {:reply, state.address, state}
   end
 
+  @impl true
+  def handle_cast({:incoming_packet, packet, incoming_interface_pid}, state) do
+    %{
+      from_node: from_node_pid,
+      to_node: to_node_pid,
+      hops: hops,
+      message: _message,
+      ack_to: ack_to,
+      ttl: ttl
+    } = parse_packet(packet)
+
+    state = update_node_map(state, from_node_pid, incoming_interface_pid, hops + 1)
+
+    if hops >= ttl do
+      {:noreply, state}
+    else
+      if is_this_node?(to_node_pid) do
+        annotated = annotate_trace(packet, state)
+        parsed_for_ack = parse_packet(annotated)
+        IO.puts("Message reached destination: #{inspect(parsed_for_ack)}")
+        if ack_to, do: send(ack_to, {:delivered, self(), hops, parsed_for_ack})
+        maybe_route_ack(parsed_for_ack, state)
+        {:noreply, state}
+      else
+        try_forward_with_retry(state, to_node_pid, incoming_interface_pid, packet)
+        {:noreply, state}
+      end
+    end
+  end
 
   # Helper functions
 
